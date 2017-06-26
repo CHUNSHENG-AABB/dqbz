@@ -14,21 +14,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/demo")
 public class DemoController {
 
-	@Autowired
-	private DemoService demoService;
+    @Autowired
+    private DemoService demoService;
 
 
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-	public String demo(){
-		return "hello";
-	}
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String demo() {
+        return "hello";
+    }
 
-	@RequestMapping(value = "/getName")
-	public String getName(){
+    @RequestMapping(value = "/getName")
+    public String getName() {
 
-		String ame = demoService.getName("1");
-		System.out.println(ame);
-		return "index";
-	}
+        String ame = demoService.getName("1");
+        System.out.println(ame);
+        return "index";
+    }
 
 }
