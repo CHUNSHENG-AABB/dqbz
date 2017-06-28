@@ -31,4 +31,8 @@ public class DemoController {
         return "index";
     }
 
+    @RequestMapping(value = "/index")
+    public String index(){
+        return "index";
+    }
 }
