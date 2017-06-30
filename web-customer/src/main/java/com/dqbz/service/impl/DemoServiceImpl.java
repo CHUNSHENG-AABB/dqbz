@@ -1,8 +1,8 @@
-package com.dqbz.service.demo.impl;
+package com.dqbz.service.impl;
 
 import com.dqbz.dao.ArticleMapper;
 import com.dqbz.model.Article;
-import com.dqbz.service.demo.DemoService;
+import com.dqbz.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

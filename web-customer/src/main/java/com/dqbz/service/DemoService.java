@@ -1,4 +1,4 @@
-package com.dqbz.service.demo;
+package com.dqbz.service;
 
 import com.dqbz.model.Article;
 
