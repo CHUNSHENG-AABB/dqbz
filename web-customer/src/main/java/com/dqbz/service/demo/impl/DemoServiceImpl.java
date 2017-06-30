@@ -1,6 +1,7 @@
 package com.dqbz.service.demo.impl;
 
-import com.dqbz.dao.DemoDao;
+import com.dqbz.dao.ArticleMapper;
+import com.dqbz.model.Article;
 import com.dqbz.service.demo.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +14,10 @@ import org.springframework.stereotype.Service;
 public class DemoServiceImpl implements DemoService{
 
 	@Autowired
-	private DemoDao demoDao;
+	private ArticleMapper articleMapper;
 
 	@Override
-	public String getName(String id) {
-		return demoDao.getName(id);
+	public Article getName(Integer id) {
+		return articleMapper.selectByPrimaryKey(id);
 	}
 }

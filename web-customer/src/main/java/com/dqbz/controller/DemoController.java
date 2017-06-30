@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author Gao Zhengyuan
@@ -23,12 +24,11 @@ public class DemoController {
         return "hello";
     }
 
-    @RequestMapping(value = "/getName")
+    @RequestMapping(value = "/sql")
+    @ResponseBody
     public String getName() {
-
-        String ame = demoService.getName("1");
-        System.out.println(ame);
-        return "index";
+        return demoService.getName(1).toString();
+//        return "index";
     }
 
     @RequestMapping(value = "/index")
