@@ -1,4 +1,6 @@
-package com.dqbz.service.demo;
+package com.dqbz.service;
+
+import com.dqbz.model.Article;
 
 /**
  * @author Gao Zhengyuan
@@ -6,5 +8,5 @@ package com.dqbz.service.demo;
  */
 public interface DemoService {
 
-	public String getName(String id);
+	public Article getName(Integer id);
 }
