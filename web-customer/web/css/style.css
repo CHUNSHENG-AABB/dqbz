@@ -219,7 +219,7 @@ body a:hover{
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
-	min-height:300px;
+	min-height:260px;
 }
 .banner-info {
     padding-top: 2em;
@@ -1209,7 +1209,7 @@ ul.list6 li a:hover,.res6 a{
 	font-size: 1.1em;
     color: #fff;
     margin: 0;
-    background: #129611;
+    background: #30966f;
     padding: .8em 1em;
     text-transform: uppercase;
     font-weight: 400;
@@ -1737,7 +1737,7 @@ a.high {
     padding: 0.8em;
 }
 .upcoming-events-right h3{
-	    background: #fa7535;
+	    background: #30966f;
 	margin: 0 !important;
 }
 .news-eve{
