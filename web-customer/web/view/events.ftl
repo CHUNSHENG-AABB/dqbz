@@ -7,10 +7,10 @@
 <meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
+<script src="../js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 </head>
@@ -30,14 +30,14 @@
 						<span class="icon-bar"></span>
 					  </button>
 						<div class="logo">
-							<a class="navbar-brand" href="index.html"><span>T</span> Trendy Blog</a>
+							<a class="navbar-brand" href="index.ftl"><span>T</span> Trendy Blog</a>
 						</div>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav" id="cl-effect-18">
-							<li><a href="index.html" class="effect1">Home</a></li>
+							<li><a href="index.ftl" class="effect1">Home</a></li>
 							<li class="act"><a class="active" href="events.html">Reviews</a></li>
 							<li><a href="breaking.html">Culture</a></li>
 							<li><a href="entertainment.html">Entertainment</a></li>
@@ -86,7 +86,7 @@
 						<div class="col-md-5 gallery-left">
 							<div class="grid">
 								<figure class="effect-lexi">
-									<img src="images/21.jpg" alt="" class="img-responsive" />
+									<img src="../images/21.jpg" alt="" class="img-responsive" />
 									<figcaption>
 										<h2>Altruistic <span>Lexi</span></h2>
 										<p>Each and every friend is special. Lexi won't hide a single cookie.</p>
@@ -97,7 +97,7 @@
 						<div class="col-md-7 gallery-right">
 							<div class="gallery-right1">
 								<div class="gallery-right1-left">
-									<img src="images/12.jpg" alt=" " class="img-responsive" />
+									<img src="../images/12.jpg" alt=" " class="img-responsive" />
 								</div>
 								<div class="gallery-right1-right">
 									<p><a href="single.html">Quis autem vel eum iure reprehenderit</a><i>Error sit voluptatem accusantium doloremque.</i><span>31.12.2015</span></p>
@@ -106,7 +106,7 @@
 							</div>
 							<div class="gallery-right1">
 								<div class="gallery-right1-left">
-									<img src="images/16.jpg" alt=" " class="img-responsive" />
+									<img src="../images/16.jpg" alt=" " class="img-responsive" />
 								</div>
 								<div class="gallery-right1-right">
 									<p><a href="single.html">Quis autem vel eum iure reprehenderit</a><span>31.12.2015</span></p>
@@ -115,7 +115,7 @@
 							</div>
 							<div class="gallery-right1">
 								<div class="gallery-right1-left">
-									<img src="images/18.jpg" alt=" " class="img-responsive" />
+									<img src="../images/18.jpg" alt=" " class="img-responsive" />
 								</div>
 								<div class="gallery-right1-right">
 									<p><a href="single.html">Quis autem vel eum iure reprehenderit</a><i>Error sit voluptatem accusantium doloremque.</i><span>31.12.2015</span></p>
@@ -128,7 +128,7 @@
 					<div class="upcoming-events-left-grids">
 						<div class="col-md-6 upcoming-events-left1">
 							<div class="upcoming-events-left11">
-								<img src="images/19.jpg" alt=" " class="img-responsive" />
+								<img src="../images/19.jpg" alt=" " class="img-responsive" />
 								<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
 										<i> </i>
 								</a>
@@ -142,7 +142,7 @@
 						</div>
 						<div class="col-md-6 upcoming-events-left2">
 							<div class="upcoming-events-left11">
-								<img src="images/20.jpg" alt=" " class="img-responsive" />
+								<img src="../images/20.jpg" alt=" " class="img-responsive" />
 								<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
 										<i> </i>
 								</a>
@@ -156,9 +156,9 @@
 						</div>
 						<div class="clearfix"> </div>
 							<!-- pop-up-box -->
-													<script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
+													<script type="text/javascript" src="../js/modernizr.custom.min.js"></script>
 													<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-													<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+													<script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
 												<!--//pop-up-box -->
 												<script>
 													$(document).ready(function() {
@@ -334,7 +334,7 @@
 							<ul>
 								<li>
 									<div class="news-grid-left1">
-										<img src="images/16.jpg" alt=" " class="img-responsive" />
+										<img src="../images/16.jpg" alt=" " class="img-responsive" />
 									</div>
 									<div class="news-grid-right1">
 										<h4><a href="single.html">Mexico's oil giant is in uncharted waters</a></h4>
@@ -345,7 +345,7 @@
 								</li>
 								<li>
 									<div class="news-grid-left1">
-										<img src="images/17.jpg" alt=" " class="img-responsive" />
+										<img src="../images/17.jpg" alt=" " class="img-responsive" />
 									</div>
 									<div class="news-grid-right1">
 										<h4><a href="single.html">second wave of votes to legalize marijuana</a></h4>
@@ -356,7 +356,7 @@
 								</li>
 								<li>
 									<div class="news-grid-left1">
-										<img src="images/13.jpg" alt=" " class="img-responsive" />
+										<img src="../images/13.jpg" alt=" " class="img-responsive" />
 									</div>
 									<div class="news-grid-right1">
 										<h4><a href="single.html">Antares rocket, bound for space station, explodes</a></h4>
@@ -367,7 +367,7 @@
 								</li>
 								<li>
 									<div class="news-grid-left1">
-										<img src="images/12.jpg" alt=" " class="img-responsive" />
+										<img src="../images/12.jpg" alt=" " class="img-responsive" />
 									</div>
 									<div class="news-grid-right1">
 										<h4><a href="single.html">stronger family bonds, two years after hurricane sandy</a></h4>
@@ -378,7 +378,7 @@
 								</li>
 								<li>
 									<div class="news-grid-left1">
-										<img src="images/15.jpg" alt=" " class="img-responsive" />
+										<img src="../images/15.jpg" alt=" " class="img-responsive" />
 									</div>
 									<div class="news-grid-right1">
 										<h4><a href="single.html">royal crush giants and force game 7</a></h4>
@@ -436,7 +436,7 @@
 								</form>
 							</div>
 							<div class="news-grid-rght3">
-								<img src="images/18.jpg" alt=" " class="img-responsive" />
+								<img src="../images/18.jpg" alt=" " class="img-responsive" />
 								<div class="story">
 									<p>story of the week</p>
 									<h3><a href="single.html">US hails west Africa Ebola progress</a></h3>
@@ -510,7 +510,7 @@
 	</div>
 <!-- //footer -->
 <!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
+	<script src="../js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
 </body>
 </html>

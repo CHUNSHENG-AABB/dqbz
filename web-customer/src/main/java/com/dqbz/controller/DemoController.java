@@ -5,6 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Gao Zhengyuan
@@ -28,11 +32,24 @@ public class DemoController {
 
         String ame = demoService.getName("1");
         System.out.println(ame);
-        return "index";
+        return "/view/index.ftl";
     }
 
     @RequestMapping(value = "/index")
-    public String index(){
-        return "index";
+    public ModelAndView index(){
+
+        Map map = new HashMap();
+        map.put("aa","kkk");
+        return new ModelAndView("index","a",map);
+    }
+
+    @RequestMapping(value = "/header")
+    public String header(){
+        return "header";
+    }
+
+    @RequestMapping(value = "/events")
+    public String events(){
+        return "events";
     }
 }
