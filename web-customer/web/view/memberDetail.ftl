@@ -33,17 +33,86 @@
         <div class="upcoming-events-grids" style="margin-top: 0px;">
 
 
+            <div class="col-md-4 upcoming-events-right" style="padding-left: 0px; width: 25%">
+                <h3>龙凤公墓</h3>
+                <div class="banner-bottom-video-grid-left">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>简介</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>产品介绍及价格</a>
+                                </h4>
+                            </div>
+                        </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>收费标准</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务标准</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>宣传展示</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>销售服务电话</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>通知公告</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="collapseFour">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>预约电话</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="collapseFour">
+			                    <h4 class="panel-title">
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>网上祭祀</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+                    </div>
+                </div>
+            </div>
 
-
-            <div class="col-md-8 news-grid-left" style="width: 100%;">
-                <h3>会员单位列表</h3>
+            <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
+                <h3>简介</h3>
                 <ul>
                     <li>
                         <div class="news-grid-left1">
                             <img src="../images/16.jpg" alt=" " class="img-responsive"/>
                         </div>
                         <div class="news-grid-right1">
-                            <h4><a href="../memberDetail">Mexico's oil giant is in uncharted waters</a></h4>
+                            <h4><a href="">Mexico's oil giant is in uncharted waters</a></h4>
                             <h5>By <a href="#">Elizibeth Malkin</a> <label>|</label> <i>31.12.2015</i></h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua.</p>

@@ -58,14 +58,14 @@
 					<img src="../images/lfgm_door.jpg">
 					<!--<div class="banner-info-slider">-->
 					<!--<ul>-->
-					<!--<li><a href="single.html">sports</a></li>-->
+					<!--<li><a href="">sports</a></li>-->
 					<!--<li>30 Aug 2016</li>-->
 					<!--</ul>-->
 					<!--<h3>Portfolio of Agency</h3>-->
 					<!--<p>Lorem ipsum dolor sit amet adipiscing elit.-->
 					<!--<span>By <i>ullamcoman</i> and <i>Micheal smithjos.</i></span></p>-->
 					<!--<div class="more">-->
-					<!--<a href="single.html" class="type-1">-->
+					<!--<a href="" class="type-1">-->
 					<!--<span> Read More </span>-->
 					<!--<span> Read More </span>-->
 					<!--</a>-->
@@ -98,8 +98,8 @@
 				<h2>最新公告</h2>
 			</div>
 			<div class="marquee">
-				<div class="marquee1"><a class="breaking" href="single.html">大庆市殡葬协会网站即将上线</a></div>
-				<div class="marquee2"><a class="breaking" href="single.html">倡导感恩纪念，推行文明缅怀</a></div>
+				<div class="marquee1"><a class="breaking" href="">大庆市殡葬协会网站即将上线</a></div>
+				<div class="marquee2"><a class="breaking" href="">倡导感恩纪念，推行文明缅怀</a></div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="clearfix"></div>
@@ -436,7 +436,7 @@
 								<img src="../images/16.jpg" alt=" " class="img-responsive"/>
 							</div>
 							<div class="news-grid-right1">
-								<h4><a href="single.html">Mexico's oil giant is in uncharted waters</a></h4>
+								<h4><a href="">Mexico's oil giant is in uncharted waters</a></h4>
 								<h5>By <a href="#">Elizibeth Malkin</a> <label>|</label> <i>30.03.2016</i></h5>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua.</p>
@@ -448,7 +448,7 @@
 								<img src="../images/17.jpg" alt=" " class="img-responsive"/>
 							</div>
 							<div class="news-grid-right1">
-								<h4><a href="single.html">second wave of votes to legalize marijuana</a></h4>
+								<h4><a href="">second wave of votes to legalize marijuana</a></h4>
 								<h5>By <a href="#">james smith</a> <label>|</label> <i>30.03.2016</i></h5>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua.</p>
@@ -460,7 +460,7 @@
 								<img src="../images/13.jpg" alt=" " class="img-responsive"/>
 							</div>
 							<div class="news-grid-right1">
-								<h4><a href="single.html">Antares rocket, bound for space station, explodes</a></h4>
+								<h4><a href="">Antares rocket, bound for space station, explodes</a></h4>
 								<h5>By <a href="#">Michael Drew</a> <label>|</label> <i>30.03.2016</i></h5>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua.</p>
@@ -472,7 +472,7 @@
 								<img src="../images/12.jpg" alt=" " class="img-responsive"/>
 							</div>
 							<div class="news-grid-right1">
-								<h4><a href="single.html">stronger family bonds, two years after hurricane sandy</a>
+								<h4><a href="">stronger family bonds, two years after hurricane sandy</a>
 								</h4>
 								<h5>By <a href="#">james smith</a> <label>|</label> <i>30.03.2016</i></h5>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -485,7 +485,7 @@
 								<img src="../images/15.jpg" alt=" " class="img-responsive"/>
 							</div>
 							<div class="news-grid-right1">
-								<h4><a href="single.html">royal crush giants and force game 7</a></h4>
+								<h4><a href="">royal crush giants and force game 7</a></h4>
 								<h5>By <a href="#">Michael Drew</a> <label>|</label> <i>30.03.2016</i></h5>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua.</p>
@@ -510,7 +510,7 @@
 							<img src="../images/18.jpg" alt=" " class="img-responsive"/>
 							<div class="story">
 								<p>story of the week</p>
-								<h3><a href="single.html">US hails west Africa Ebola progress</a></h3>
+								<h3><a href="">US hails west Africa Ebola progress</a></h3>
 							</div>
 						</div>
 					</div>
@@ -547,7 +547,7 @@
 						<div class="video-bottom-grid1-before">
 							<div class="news-grid-left news-grid-left2">
 								<h3>关于协会</h3>
-								<a href="">更多</a>
+								<a href="../association">更多</a>
 							</div>
 						</div>
 						<ul>
@@ -563,7 +563,7 @@
 						<div class="video-bottom-grid1-before">
 							<div class="news-grid-left news-grid-left2">
 								<h3>绿色殡葬</h3>
-								<a href="">更多</a>
+								<a href="../greenStyle">更多</a>
 							</div>
 						</div>
 						<ul>
@@ -579,7 +579,7 @@
 						<div class="video-bottom-grid1-before">
 							<div class="news-grid-left news-grid-left2">
 								<h3>殡葬传统文化</h3>
-								<a href="">更多</a>
+								<a href="../traditionStyle">更多</a>
 							</div>
 						</div>
 						<ul>
@@ -595,7 +595,7 @@
 						<div class="video-bottom-grid1-before">
 							<div class="news-grid-left news-grid-left2">
 								<h3>行业规范</h3>
-								<a href="">更多</a>
+								<a href="../professionStyle">更多</a>
 							</div>
 						</div>
 						<ul>
@@ -621,7 +621,7 @@
 				<!--<li><a href="#">But I must explain to you how all this mistaken.</a></li>-->
 				<!--</ul>-->
 				<!--<div class="read-more res2">-->
-				<!--<a href="single.html">Read more in Blogger</a>-->
+				<!--<a href="">Read more in Blogger</a>-->
 				<!--</div>-->
 				<!--</div>-->
 				<!--</div>-->
@@ -649,10 +649,11 @@
 								</li>
 							</ul>
 						</div>
-						<p style="text-align: center;font-style: inherit;color: white">人生百年终思归, 叶落归根龙凤情</p>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
 							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health" style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
 								<a href="">大庆市龙凤公墓</a>
 							</div>
 						</div>
@@ -668,7 +669,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt br-bm-gd-lt1">
+				<div class="br-bm-gd-lt">
 					<div class="overlay">
 						<div class="arrow-left"></div>
 						<div class="rectangle"></div>
@@ -676,26 +677,33 @@
 					<div class="health-pos">
 						<div class="health">
 							<ul>
-								<li>30 Aug 2016</li>
+								<li>
+									<a href="">产品列表</a>
+									<a href="">收费标准</a>
+								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>200
-									Comments</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>13,536
-									Likes</a></li>
+								<li>
+									<a href="#">龙凤公墓</a>
+								</li>
+
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt br-bm-gd-lt3">
+				<div class="br-bm-gd-lt">
 					<div class="overlay">
 						<div class="arrow-left"></div>
 						<div class="rectangle"></div>
@@ -703,27 +711,33 @@
 					<div class="health-pos">
 						<div class="health">
 							<ul>
-								<li><a href="#" class="general">General</a></li>
-								<li>30 Aug 2016</li>
+								<li>
+									<a href="">产品列表</a>
+									<a href="">收费标准</a>
+								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>150
-									Comments</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>15,536
-									Likes</a></li>
+								<li>
+									<a href="#">龙凤公墓</a>
+								</li>
+
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt br-bm-gd-lt3">
+				<div class="br-bm-gd-lt">
 					<div class="overlay">
 						<div class="arrow-left"></div>
 						<div class="rectangle"></div>
@@ -731,20 +745,26 @@
 					<div class="health-pos">
 						<div class="health">
 							<ul>
-								<li><a href="#" class="general">General</a></li>
-								<li>30 Aug 2016</li>
+								<li>
+									<a href="">产品列表</a>
+									<a href="">收费标准</a>
+								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>150
-									Comments</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>15,536
-									Likes</a></li>
+								<li>
+									<a href="#">龙凤公墓</a>
+								</li>
+
 							</ul>
 						</div>
 					</div>
@@ -754,7 +774,7 @@
 		</div>
 		<div class="banner-bottom-grids" style="margin-top: 20px">
 			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt br-bm-gd-lt4">
+				<div class="br-bm-gd-lt">
 					<div class="overlay">
 						<div class="arrow-left"></div>
 						<div class="rectangle"></div>
@@ -762,27 +782,33 @@
 					<div class="health-pos">
 						<div class="health">
 							<ul>
-								<li><a href="#" class="pol">Blogger</a></li>
-								<li>30 Aug 2016</li>
+								<li>
+									<a href="">产品列表</a>
+									<a href="">收费标准</a>
+								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>450
-									Comments</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>12,965
-									Likes</a></li>
+								<li>
+									<a href="#">龙凤公墓</a>
+								</li>
+
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt br-bm-gd-lt5">
+				<div class="br-bm-gd-lt">
 					<div class="overlay">
 						<div class="arrow-left"></div>
 						<div class="rectangle"></div>
@@ -790,27 +816,33 @@
 					<div class="health-pos">
 						<div class="health">
 							<ul>
-								<li><a href="#" class="world">World</a></li>
-								<li>30 Aug 2016</li>
+								<li>
+									<a href="">产品列表</a>
+									<a href="">收费标准</a>
+								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>212
-									Comments</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>18,536
-									Likes</a></li>
+								<li>
+									<a href="#">龙凤公墓</a>
+								</li>
+
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt br-bm-gd-lt7">
+				<div class="br-bm-gd-lt">
 					<div class="overlay">
 						<div class="arrow-left"></div>
 						<div class="rectangle"></div>
@@ -818,27 +850,33 @@
 					<div class="health-pos">
 						<div class="health">
 							<ul>
-								<li><a href="#" class="business">business</a></li>
-								<li>30 Aug 2016</li>
+								<li>
+									<a href="">产品列表</a>
+									<a href="">收费标准</a>
+								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>297
-									Comments</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>9,996
-									Likes</a></li>
+								<li>
+									<a href="#">龙凤公墓</a>
+								</li>
+
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt br-bm-gd-lt7">
+				<div class="br-bm-gd-lt">
 					<div class="overlay">
 						<div class="arrow-left"></div>
 						<div class="rectangle"></div>
@@ -846,20 +884,26 @@
 					<div class="health-pos">
 						<div class="health">
 							<ul>
-								<li><a href="#" class="business">business</a></li>
-								<li>30 Aug 2016</li>
+								<li>
+									<a href="">产品列表</a>
+									<a href="">收费标准</a>
+								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health"
+							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
-								<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>297
-									Comments</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>9,996
-									Likes</a></li>
+								<li>
+									<a href="#">龙凤公墓</a>
+								</li>
+
 							</ul>
 						</div>
 					</div>

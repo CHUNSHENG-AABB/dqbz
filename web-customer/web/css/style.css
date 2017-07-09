@@ -272,7 +272,7 @@ body a:hover{
     background-color: transparent;
 }
 .navbar-nav li.act a{
-	color:#35fa71;
+	color: #feffff;
 }
 /*-- nav-effect --*/
 .cl-effect-18 a.effect1::before, .cl-effect-18 a.effect1::after {
@@ -584,6 +584,16 @@ body a:hover{
 	padding: .1em 1.2em;
 	/*border:2px solid #1ABC9C;*/
 	text-decoration:none;
+}
+
+
+
+.health ul li a:hover{
+    color: #00f116;
+    background: #1ABC9C;
+    padding: .1em 1.2em;
+    /*border:2px solid #1ABC9C;*/
+    text-decoration:none;
 }
 
 .health ul li:nth-child(1){
@@ -1210,7 +1220,7 @@ ul.list6 li a:hover,.res6 a{
 	font-size: 1.1em;
     color: #fff;
     margin: 0;
-    background: #30966f;
+    background: #129611;
     padding: .8em 1em;
     text-transform: uppercase;
     font-weight: 400;
@@ -3077,10 +3087,6 @@ img.mobile1 {
 	}
 	.health ul li {
 		font-size: 13px;
-	}
-	.health ul li a:hover {
-		padding: .1em 0.3em;
-        color: #00f116;
 	}
 
 	.health {

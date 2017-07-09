@@ -31,9 +31,9 @@
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1" style="background-color:#129611;padding-left: 100px; padding-bottom: 5px;margin-bottom: 15px">
 					<ul class="nav navbar-nav " id="cl-effect-18" style="float: none;">
 						<li class="act"><a href="/" class="effect1 active">首页</a></li>
-						<li><a href="events.html">关于协会</a></li>
+						<li><a href="../association">关于协会</a></li>
 						<li><a href="../members">会员单位</a></li>
-						<li><a href="entertainment.html">新闻资讯</a></li>
+						<li><a href="../news">新闻资讯</a></li>
 						<!--<li role="presentation" class="dropdown">-->
 						<!--<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">-->
 						<!--Business <span class="caret"></span>-->
@@ -44,11 +44,11 @@
 
 						<!--</ul>-->
 						<!--</li>-->
-						<li><a href="contact.html">绿色殡葬</a></li>
-						<li><a href="contact.html">殡葬及传统文化</a></li>
-						<li><a href="contact.html">行业管理</a></li>
-						<li><a href="contact.html">活动通知</a></li>
-						<li><a href="contact.html">服务中心</a></li>
+						<li><a href="../greenStyle">绿色殡葬</a></li>
+						<li><a href="../traditionStyle">殡葬及传统文化</a></li>
+						<li><a href="../professionStyle">行业管理</a></li>
+						<li><a href="../activity">活动通知</a></li>
+						<li><a href="../serviceCenter">服务中心</a></li>
 					</ul>
 				</div>
 			</nav>

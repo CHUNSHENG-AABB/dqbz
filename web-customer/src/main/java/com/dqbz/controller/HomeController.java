@@ -28,4 +28,43 @@ public class HomeController {
         return "members";
     }
 
+    @RequestMapping(value = "/association")
+    public String association(){
+        return "association";
+    }
+
+    @RequestMapping(value = "/memberDetail")
+    public String memberDetail(){
+        return "memberDetail";
+    }
+
+    @RequestMapping(value = "/news")
+    public String news(){
+        return "news";
+    }
+
+    @RequestMapping(value = "/greenStyle")
+    public String greenStyle(){
+        return "greenStyle";
+    }
+
+    @RequestMapping(value = "/traditionStyle")
+    public String traditionStyle(){
+        return "traditionStyle";
+    }
+
+    @RequestMapping(value = "/professionStyle")
+    public String professionStyle(){
+        return "professionStyle";
+    }
+
+    @RequestMapping(value = "/activity")
+    public String activity(){
+        return "activity";
+    }
+
+    @RequestMapping(value = "/serviceCenter")
+    public String serviceCenter(){
+        return "serviceCenter";
+    }
 }
