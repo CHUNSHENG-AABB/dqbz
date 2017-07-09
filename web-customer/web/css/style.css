@@ -580,11 +580,12 @@ body a:hover{
 }
 .health ul li a{
 	color: #fff;
-    /*background: #1ABC9C;*/
+    background: #1ABC9C;
 	padding: .1em 1.2em;
 	/*border:2px solid #1ABC9C;*/
 	text-decoration:none;
 }
+
 .health ul li:nth-child(1){
 	margin-left:0;
 	padding:0;
@@ -639,7 +640,7 @@ body a:hover{
 }
 .banner-bottom-grid-left:hover .health ul li a{
 	background:none;
-	border:2px solid #fff;
+	border:1px solid #fff;
 }
 .dummy{
 	display:none;
@@ -3077,9 +3078,11 @@ img.mobile1 {
 	.health ul li {
 		font-size: 13px;
 	}
-	.health ul li a {
+	.health ul li a:hover {
 		padding: .1em 0.3em;
+        color: #00f116;
 	}
+
 	.health {
 		padding: 1em 0.5em 0;
 	}

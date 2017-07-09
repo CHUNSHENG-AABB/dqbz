@@ -649,9 +649,12 @@
 								</li>
 							</ul>
 						</div>
-						<h3>But I must explain to you how all this mistaken idea.</h3>
+						<p style="text-align: center;font-style: inherit;color: white">人生百年终思归, 叶落归根龙凤情</p>
 						<div class="dummy">
-							<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut maiores alias.</p>
+							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
+							<div class="health" style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+								<a href="">大庆市龙凤公墓</a>
+							</div>
 						</div>
 						<div class="com-heart">
 							<ul>
