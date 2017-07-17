@@ -1,5 +1,6 @@
 package com.dqbz.service;
 
+import com.dqbz.model.Activity;
 import com.dqbz.model.Article;
 
 /**
@@ -8,5 +9,7 @@ import com.dqbz.model.Article;
  */
 public interface DemoService {
 
-	public Article getName(Integer id);
+	Article getName(Integer id);
+
+	Activity getAllActivity();
 }

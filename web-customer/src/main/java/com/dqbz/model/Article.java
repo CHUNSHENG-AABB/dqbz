@@ -258,18 +258,4 @@ public class Article {
     public void setIntroduction(String introduction) {
         this.introduction = introduction == null ? null : introduction.trim();
     }
-
-    @Override
-    public String toString() {
-        return "Article{" +
-                "id=" + id +
-                ", type='" + type + '\'' +
-                ", title='" + title + '\'' +
-                ", inputTime=" + inputTime +
-                ", inputUser='" + inputUser + '\'' +
-                ", updateTime=" + updateTime +
-                ", updateUser='" + updateUser + '\'' +
-                ", introduction='" + introduction + '\'' +
-                '}';
-    }
 }

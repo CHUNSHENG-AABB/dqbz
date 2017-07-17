@@ -54,14 +54,7 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>收费标准</a>
-			                    </h4>
-		                    </div>
-	                    </div>
-	                    <div class="panel panel-default">
-		                    <div class="panel-heading" role="tab" id="headingTwo">
-			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务标准</a>
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务及收费标准</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -75,7 +68,7 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>销售服务电话</a>
+				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>联系电话</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -83,13 +76,6 @@
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
 				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>通知公告</a>
-			                    </h4>
-		                    </div>
-	                    </div>
-	                    <div class="panel panel-default">
-		                    <div class="panel-heading" role="tab" id="collapseFour">
-			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>预约电话</a>
 			                    </h4>
 		                    </div>
 	                    </div>

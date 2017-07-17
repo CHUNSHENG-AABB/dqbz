@@ -1,10 +1,14 @@
 package com.dqbz.controller;
 
+import com.dqbz.model.Activity;
+import com.dqbz.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,9 +19,14 @@ import java.util.Map;
 @RequestMapping("/")
 public class HomeController {
 
+    @Autowired
+    private DemoService demoService;
+
     @RequestMapping(value = "/")
     public ModelAndView index(){
 
+        Activity activity = demoService.getAllActivity();
+        System.out.println(activity);
         Map map = new HashMap();
         map.put("aa","kkk");
         return new ModelAndView("index","a",map);
