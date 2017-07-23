@@ -18,14 +18,6 @@
     <script src="../js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-
-    <script type="text/javascript">
-        function loadPage(pageLink) {
-            $("#content").html(null);
-            $("#content").load(pageLink);
-        }
-    </script>
-
 </head>
 
 <body>
@@ -42,55 +34,27 @@
 
 
             <div class="col-md-4 upcoming-events-right" style="padding-left: 0px; width: 25%">
-                <h3>${member.name}</h3>
+                <h3>关于协会</h3>
                 <div class="banner-bottom-video-grid-left">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="/memberDetail?id=${member.id}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>简介</a>
-			                    </h4>
-		                    </div>
-	                    </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
-                                    <a href="#" onclick="loadPage('/product?memberId=${member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>产品介绍及价格</a>
-                                </h4>
-                            </div>
-                        </div>
-	                    <div class="panel panel-default">
-		                    <div class="panel-heading" role="tab" id="headingTwo">
-			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/product');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务及收费标准</a>
+				                    <a href="/association"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>协会简介</a>
 			                    </h4>
 		                    </div>
 	                    </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>宣传展示</a>
+				                    <a href="/constitution"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>协会章程</a>
 			                    </h4>
 		                    </div>
 	                    </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>联系电话</a>
-			                    </h4>
-		                    </div>
-	                    </div>
-	                    <div class="panel panel-default">
-		                    <div class="panel-heading" role="tab" id="headingTwo">
-			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>通知公告</a>
-			                    </h4>
-		                    </div>
-	                    </div>
-	                    <div class="panel panel-default">
-		                    <div class="panel-heading" role="tab" id="collapseFour">
-			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>网上祭祀</a>
+				                    <a href="../members"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>组织机构</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -98,11 +62,12 @@
                 </div>
             </div>
 
+
             <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
-                <h3>简介</h3>
-               <div id="content">
-				   ${member.content}
-			   </div>
+                <h3>协会章程</h3>
+                <div>
+                    ${constitution.content}
+                </div>
             </div>
             <div class="clearfix"></div>
         </div>
