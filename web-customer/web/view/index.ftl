@@ -162,7 +162,7 @@
 									<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
 										<i> </i>
 									</a>
-									<div id="small-dialog2" class="mfp-hide">
+									<div id="small-dialog" class="mfp-hide">
 										<iframe src="" width="500" height="281" frameborder="0" webkitallowfullscreen
 										        mozallowfullscreen allowfullscreen></iframe>
 									</div>
@@ -179,7 +179,7 @@
 									<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
 										<i> </i>
 									</a>
-									<div id="small-dialog3" class="mfp-hide">
+									<div id="small-dialog" class="mfp-hide">
 										<iframe src="" width="500" height="281" frameborder="0" webkitallowfullscreen
 										        mozallowfullscreen allowfullscreen></iframe>
 									</div>
@@ -236,10 +236,9 @@
 							$("#flexiselDemo1").flexisel({
 								visibleItems: 3,
 								animationSpeed: 1000,
-								autoPlay: true,
-								autoPlaySpeed: 3000,
-								pauseOnHover: true,
-								enableResponsiveBreakpoints: true,
+								autoPlay: false,
+								pauseOnHover: false,
+								enableResponsiveBreakpoints: false,
 								responsiveBreakpoints: {
 									portrait: {
 										changePoint: 480,

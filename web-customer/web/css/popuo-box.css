@@ -139,7 +139,8 @@ opacity: 0;
   display: none; }
 
 .mfp-content {
-  position: relative;
+  position: absolute;
+	left: 4%;
   display: inline-block;
   vertical-align: middle;
   margin: 0 auto;

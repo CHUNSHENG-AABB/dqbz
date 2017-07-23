@@ -92,68 +92,7 @@
 
             <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
                 <h3>简介</h3>
-                <ul>
-                    <li>
-                        <div class="news-grid-left1">
-                            <img src="../images/16.jpg" alt=" " class="img-responsive"/>
-                        </div>
-                        <div class="news-grid-right1">
-                            <h4><a href="">Mexico's oil giant is in uncharted waters</a></h4>
-                            <h5>By <a href="#">Elizibeth Malkin</a> <label>|</label> <i>31.12.2015</i></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <div class="news-grid-left1">
-                            <img src="../images/17.jpg" alt=" " class="img-responsive"/>
-                        </div>
-                        <div class="news-grid-right1">
-                            <h4><a href="">second wave of votes to legalize marijuana</a></h4>
-                            <h5>By <a href="#">james smith</a> <label>|</label> <i>31.12.2015</i></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <div class="news-grid-left1">
-                            <img src="../images/13.jpg" alt=" " class="img-responsive"/>
-                        </div>
-                        <div class="news-grid-right1">
-                            <h4><a href="">Antares rocket, bound for space station, explodes</a></h4>
-                            <h5>By <a href="#">Michael Drew</a> <label>|</label> <i>31.12.2015</i></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <div class="news-grid-left1">
-                            <img src="../images/12.jpg" alt=" " class="img-responsive"/>
-                        </div>
-                        <div class="news-grid-right1">
-                            <h4><a href="">stronger family bonds, two years after hurricane sandy</a></h4>
-                            <h5>By <a href="#">james smith</a> <label>|</label> <i>31.12.2015</i></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <div class="news-grid-left1">
-                            <img src="../images/15.jpg" alt=" " class="img-responsive"/>
-                        </div>
-                        <div class="news-grid-right1">
-                            <h4><a href="">royal crush giants and force game 7</a></h4>
-                            <h5>By <a href="#">Michael Drew</a> <label>|</label> <i>31.12.2015</i></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
+               <div></div>
             </div>
             <div class="clearfix"></div>
         </div>
