@@ -1,0 +1,32 @@
+关于协会
+	--协会简介		association  CONTENT		type=1
+	--协会章程		association  CONTENT		type=2
+	--组织机构=会员单位
+
+会员单位		member
+	--简介			member		CONTENT
+	--产品介绍及价格	product		list[坟]
+	--服务			service	
+	--宣传展示		resource
+	--联系电话		member		contact
+	--通知公告		news		type=2
+	--网上祭祀-------
+
+新闻资讯
+	--历届会议		news		type=1
+	--活动资讯=活动通知
+
+绿色殡葬
+	--文明祭祀		article		type=1
+	--殡葬传统		article		type=2
+	--文化常识		article		type=3
+
+行业管理
+	--行业条例		arcitle		type=4
+	--行为规范		arcitle		type=5
+
+服务中心
+	--从去世到安		article		type=6
+	--基本丧葬费		article		type=7
+	--选择性消费		article		type=8
+	--指定服务点		article		type=9
