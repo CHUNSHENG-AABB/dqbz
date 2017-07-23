@@ -53,6 +53,16 @@ public class ServiceController {
         return "editor";
     }
 
+    @RequestMapping(value = "/cover_editor")
+    public String coverEditor(){
+        return "cover_editor";
+    }
+
+    @RequestMapping(value = "/member_info")
+    public String memberInfo(){
+        return "member_info";
+    }
+
 
 
     @RequestMapping(value = "/association_introduction_updateRecord", method = POST)
@@ -82,7 +92,7 @@ public class ServiceController {
 
         JSONObject jsonObject = new JSONObject();
 
-        jsonObject.put("key", "修改成功");
+        jsonObject.put("key", "OK");
 
         return jsonObject.toString();
     }

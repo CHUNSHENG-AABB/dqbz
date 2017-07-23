@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dqbz.iml" filepath="$PROJECT_DIR$/dqbz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dqbz.iml" filepath="$PROJECT_DIR$/dqbz.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-customer/web-customer.iml" filepath="$PROJECT_DIR$/web-customer/web-customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-customer/web-customer.iml" filepath="$PROJECT_DIR$/web-customer/web-customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-service/web-service.iml" filepath="$PROJECT_DIR$/web-service/web-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-service/web-service.iml" filepath="$PROJECT_DIR$/web-service/web-service.iml" />
     </modules>
   </component>

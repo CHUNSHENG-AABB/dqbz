@@ -276,7 +276,7 @@
 		<div class="sidebar-collapse">
 			<ul class="nav" id="main-menu">
 				<li>
-					<a class="active-menu" href="#" ><i class="fa fa-dashboard"></i> 协会管理<span class="fa arrow"></span></a>
+					<a class="" href="#" ><i class="fa fa-dashboard"></i> 协会管理<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li>
 							<a href="#" onclick="loadPage('association_introduction')">简介管理</a>
@@ -286,6 +286,29 @@
 						</li>
 					</ul>
 				</li>
+                <li>
+                    <a  href="#" ><i class="fa fa-desktop"></i> 会员管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#" onclick="loadPage('member_info')">会员信息管理</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="loadPage('cover_editor	')">产品及价格管理</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="loadPage('')">服务及价格管理</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="loadPage('')">宣传展示管理</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="loadPage('')">通知公告管理</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="loadPage('')">网上祭祀管理</a>
+                        </li>
+                    </ul>
+                </li>
 				<li>
 					<a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
 				</li>
