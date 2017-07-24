@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<script id="editor" type="text/plain" style="width:70%;height:200px;"></script>
+<script id="editor" name="editor" type="text/plain" style="width:70%;height:200px;"></script>
 <script type="text/javascript">
 	var text_ue = UE.getEditor('editor',{
         toolbars: [

@@ -14,9 +14,9 @@
 </head>
 <body>
 
-<script id="editor" type="text/plain" style="width:70%;height:200px;"></script>
+<script id="cover_editor"  type="text/plain" style="width:70%;height:200px;"></script>
 <script type="text/javascript">
-	var cover_ue = UE.getEditor('editor',{
+	var cover_ue = UE.getEditor('cover_editor',{
         toolbars: [
             ['fullscreen', 'source', 'undo', 'redo','simpleupload', 'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify', 'pagebreak','cleardoc']
         ]

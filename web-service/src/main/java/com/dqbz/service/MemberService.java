@@ -7,6 +7,8 @@ import com.dqbz.model.Member;
  */
 public interface MemberService {
 
+	int insertMember(Member member);
+
 	Member getMember(int id);
 
 	Integer saveMember(Member member);

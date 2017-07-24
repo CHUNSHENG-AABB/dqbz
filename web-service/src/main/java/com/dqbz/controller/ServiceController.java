@@ -1,7 +1,9 @@
 package com.dqbz.controller;
 
 import com.dqbz.model.Association;
+import com.dqbz.model.Member;
 import com.dqbz.service.AssociationService;
+import com.dqbz.service.MemberService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +30,7 @@ public class ServiceController {
 
     @Autowired
     private AssociationService associationService;
+    private MemberService memberService;
 
     @RequestMapping(value = "/")
     public String index(){
@@ -96,6 +99,27 @@ public class ServiceController {
 
         return jsonObject.toString();
     }
+
+    @RequestMapping(value = "/addMember", method = POST)
+    public @ResponseBody String addMember(@RequestBody String data){
+
+        JSONObject requestData = new JSONObject(data);
+
+        Member member = new Member();
+        member.setName(requestData.getString("memberName"));
+        member.setCover(requestData.getString("cover"));
+        memberService.insertMember(member);
+
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("key", "OK");
+
+        return jsonObject.toString();
+    }
+
+
+
+
 
     @RequestMapping(value = "/greenStyle")
     public String greenStyle(){
