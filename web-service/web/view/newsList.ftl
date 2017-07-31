@@ -12,7 +12,7 @@
             <div class="col-md-1" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">选择</div>
             <div class="col-md-5" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">新闻标题</div>
             <div class="col-md-2" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">发布单位</div>
-            <div class="col-md-2" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">发布时间</div>
+            <div class="col-md-3" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">发布时间</div>
 		</div>
 
 		<#assign i = 1>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-5" style="border:1px solid black;font-size: 16px; text-align: center">${news.title}</div>
                 <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${news.memberid}</div>
-                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${news.updateTime?string("yyyy-MM-dd HH:mm:ss")}</div>
+                <div class="col-md-3" style="border:1px solid black;font-size: 16px; text-align: center">${news.updateTime?string("yyyy-MM-dd HH:mm:ss")}</div>
 			</div>
 		</#list>
 
@@ -82,6 +82,7 @@
             },
             success:function (result){
                 alert(result['key']);
+                loadPage('newsList');
             },
             error: function(result) {
                 alert(result);

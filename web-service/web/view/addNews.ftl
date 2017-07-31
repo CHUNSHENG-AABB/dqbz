@@ -59,6 +59,7 @@
             },
         	success: function (result) {
             	alert(result['key']);
+                loadPage('newsList');
         	},
         	error: function (result) {
 				alert(result);

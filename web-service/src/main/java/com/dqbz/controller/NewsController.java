@@ -56,6 +56,7 @@ public class NewsController {
 
         News news = new News();
         news.setTitle(requestData.getString("title"));
+        news.setType("1");
         news.setMemberid(Integer.parseInt(requestData.getString("memberid")));
         news.setContent(requestData.getString("content"));
 
