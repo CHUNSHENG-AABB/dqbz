@@ -2,6 +2,7 @@ package com.dqbz.service.impl;
 
 import com.dqbz.dao.MemberMapper;
 import com.dqbz.model.Member;
+import com.dqbz.model.MemberWithBLOBs;
 import com.dqbz.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ public class MemberServiceImpl implements MemberService{
     private MemberMapper memberMapper;
 
     @Override
-    public int insertMember(Member member){
+    public int insertMember(MemberWithBLOBs member){
         return memberMapper.insertSelective(member);
     }
 

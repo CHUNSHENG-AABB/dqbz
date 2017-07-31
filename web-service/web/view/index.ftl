@@ -309,8 +309,19 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a class="" href="#" ><i class="fa fa-dashboard"></i> 新闻管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#" onclick="loadPage('newsList')">历届会议</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="loadPage('')">活动资讯</a>
+                        </li>
+                    </ul>
+                </li>
 				<li>
-					<a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
+					<a href="ui-elements.html"><i class="fa fa-desktop"></i>1111</a>
 				</li>
 				<li>
 					<a href="chart.html"><i class="fa fa-bar-chart-o"></i> Charts</a>

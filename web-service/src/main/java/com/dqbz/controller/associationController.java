@@ -1,7 +1,7 @@
 package com.dqbz.controller;
 
 import com.dqbz.model.Association;
-import com.dqbz.model.Member;
+import com.dqbz.model.MemberWithBLOBs;
 import com.dqbz.service.AssociationService;
 import com.dqbz.service.MemberService;
 import org.json.JSONObject;
@@ -12,11 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
@@ -26,11 +21,10 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 @RequestMapping("/")
 
-public class ServiceController {
+public class AssociationController {
 
     @Autowired
     private AssociationService associationService;
-    private MemberService memberService;
 
     @RequestMapping(value = "/")
     public String index(){
@@ -98,51 +92,5 @@ public class ServiceController {
         jsonObject.put("key", "OK");
 
         return jsonObject.toString();
-    }
-
-    @RequestMapping(value = "/addMember", method = POST)
-    public @ResponseBody String addMember(@RequestBody String data){
-
-        JSONObject requestData = new JSONObject(data);
-
-        Member member = new Member();
-        member.setName(requestData.getString("memberName"));
-        member.setCover(requestData.getString("cover"));
-        memberService.insertMember(member);
-
-        JSONObject jsonObject = new JSONObject();
-
-        jsonObject.put("key", "OK");
-
-        return jsonObject.toString();
-    }
-
-
-
-
-
-    @RequestMapping(value = "/greenStyle")
-    public String greenStyle(){
-        return "greenStyle";
-    }
-
-    @RequestMapping(value = "/traditionStyle")
-    public String traditionStyle(){
-        return "traditionStyle";
-    }
-
-    @RequestMapping(value = "/professionStyle")
-    public String professionStyle(){
-        return "professionStyle";
-    }
-
-    @RequestMapping(value = "/activity")
-    public String activity(){
-        return "activity";
-    }
-
-    @RequestMapping(value = "/serviceCenter")
-    public String serviceCenter(){
-        return "serviceCenter";
     }
 }

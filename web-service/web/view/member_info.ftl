@@ -24,7 +24,11 @@
 
         <div>
             <label>联系电话:</label>
-            <div id="text_editor" style="width: 230px; height: 160px"></div>
+            <#--<div id="text_editor" style="width: 230px; height: 160px"></div>-->
+			<div>
+                <textarea name="phoneInfo" style="width: 300px; height: 50px"></textarea>
+			</div>
+
         </div>
 	</form>
 </div>
@@ -32,7 +36,9 @@
     var cover_ue = UE.getEditor('cover_editor',{
         toolbars: [
             ['simpleupload','cleardoc']
-        ]
+        ],
+        autoFloatEnabled: false,
+		zIndex:0
     });
 
     var text_ue = UE.getEditor('text_editor',{
@@ -47,7 +53,7 @@
 
 	function updateIntroductionRecord(){
 		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"memberName":$("#memberName").val(),"cover":cover_ue.getContent(),"content":ue.getContent(),"telphone":text_ue.getContent()});
+		var json = JSON.stringify({"memberName":$("#memberName").val(),"cover":cover_ue.getContent(),"content":ue.getContent()});
 		$.ajax({
 			type:"post",
 			contentType: "application/json;charset=utf-8",
