@@ -26,7 +26,7 @@ public class NewsServiceImpl implements NewsService{
 
     @Override
     public int updateNews(News news){
-        return newsMapper.updateByPrimaryKey(news);
+        return newsMapper.updateByPrimaryKeyWithBLOBs(news);
     }
 
     @Override
@@ -34,5 +34,16 @@ public class NewsServiceImpl implements NewsService{
         return newsMapper.selectByPrimaryKey(id);
     }
 
+    @Override
+    public int deleteNewsByID(int id){
+
+        return newsMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public News selectNewByID(int id){
+
+        return newsMapper.selectByPrimaryKey(id);
+    }
 
 }

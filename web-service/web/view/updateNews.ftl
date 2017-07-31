@@ -7,7 +7,7 @@
 			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="updateIntroductionRecord()" id="updateRecord" value="修改">-->
 			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="addRecord()" id="deleteRecord" value="删除">-->
 		</div>
-
+            <input type="text" style="display: none" id="newsID" value=${news.id}>
 		<div>
 			<label>新闻标题：</label>
 			<input type="text" id="title" class="form-control" style="width: 300px" value=${news.title}>
@@ -15,7 +15,11 @@
 
         <div style="margin-top: 20px">
             <label>发布单位：</label>
-            <input type="text" class="form-control" value=${news.memberid} readonly="true">
+            <select id="memberID" class="form-control">
+                <option value="1">龙凤公墓</option>
+                <option value="2">天堂公墓</option>
+                <option value="3">寿山公墓</option>
+            </select>
         </div>
 
 		<div style="margin-top: 20px">
@@ -33,75 +37,32 @@
         ue.setContent('${news.content}');
     });
 
-    var cover_ue = UE.getEditor('cover_editor',{
-        toolbars: [
-            ['simpleupload','cleardoc']
-        ],
-        autoFloatEnabled: false,
-		zIndex:0
-    });
-
-    var text_ue = UE.getEditor('text_editor',{
-        toolbars: [
-            ['justifyleft', 'justifyright', 'justifycenter', 'justifyjustify']
-        ]
-    });
-
-	ue.ready(function() {
-		ue.setContent('');
-	});
-
 	function saveRecord() {
-		var title = $("#title").val();
-		var member = $("#memberID").val();
-		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"title":title,"memberid":member,"content":content});
-		$.ajax({
-            type:"post",
+        var title = $("#title").val();
+        var member = $("#memberID").val();
+        var content = UE.getEditor('editor').getContent();
+        var newsId = $('#newsID').val();
+        var json = JSON.stringify({"NewsID":newsId,"title": title, "memberid": member, "content": content});
+        $.ajax({
+            type: "post",
             contentType: "application/json;charset=utf-8",
-            url: "/addNews",
+            url: "/updateNews",
             data: json,
-            dataType:'json',
+            dataType: 'json',
             beforeSend: function () {
-                if(content.length == 0 ){
+                if (content.length == 0) {
                     alert("请填写编辑内容！");
                     $.abort();
                 }
             },
-            success:function (result){
+            success: function (result) {
                 alert(result['key']);
             },
-            error: function(result) {
+            error: function (result) {
                 alert(result);
                 console.log(result);
             }
 
-		});
-
+        });
     }
-
-	function updateIntroductionRecord(){
-		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"memberName":$("#memberName").val(),"cover":cover_ue.getContent(),"content":ue.getContent()});
-		$.ajax({
-			type:"post",
-			contentType: "application/json;charset=utf-8",
-			url: "/addMember",
-			data: json,
-			dataType:'json',
-			beforeSend: function () {
-				if(content.length == 0 ){
-					alert("请填写编辑内容！");
-					$.abort();
-				}
-			},
-			success:function (result){
-				alert(result['key']);
-			},
-			error: function(result) {
-				alert(result);
-				console.log(result);
-			}
-		});
-	}
 </script>

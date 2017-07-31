@@ -5,7 +5,7 @@
 			<label>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作:</label>
 			<input type="button" class="form-control" style="margin-left: 10px" onclick="loadPage('addNewsPage')" value="新增">
 			<input type="button" class="form-control" style="margin-left: 10px" onclick="updateNews()" value="修改">
-			<input type="button" class="form-control" style="margin-left: 10px" onclick="deleteRecord()" id="deleteRecord" value="删除">
+			<input type="button" class="form-control" style="margin-left: 10px" onclick="deleteNews()" id="deleteRecord" value="删除">
 		</div>
 
 		<div class="container-fluid">
@@ -58,9 +58,38 @@
 
     function updateNews(){
         var newsID = $('input:radio:checked').val();
-        var json = JSON.stringify({"newsID":newsID});
-        loadPage('getNewsByID?newsID='+json);
+		if(newsID == null){
+			alert("请选择要修改的记录！");
+			$.abort();
+		}
+        loadPage('getNewsByID?newsID='+newsID);
 	}
+
+    function deleteNews(){
+        var newsID = $('input:radio:checked').val();
+        var json = JSON.stringify({"newsID":newsID});
+        $.ajax({
+            type:"post",
+            contentType: "application/json;charset=utf-8",
+            url: "/deleteNewsByID",
+            data: json,
+            dataType:'json',
+            beforeSend: function () {
+                if(newsID == null ){
+                    alert("请选择要删除的记录！");
+                    $.abort();
+                }
+            },
+            success:function (result){
+                alert(result['key']);
+            },
+            error: function(result) {
+                alert(result);
+                console.log(result);
+            }
+        });
+
+    }
 </script>
 
 <script type="text/javascript">

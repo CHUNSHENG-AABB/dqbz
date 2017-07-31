@@ -20,8 +20,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
  */
 @Controller
 @RequestMapping("/")
-
-public class AssociationController {
+class AssociationController {
 
     @Autowired
     private AssociationService associationService;

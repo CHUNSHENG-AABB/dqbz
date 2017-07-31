@@ -16,4 +16,8 @@ public interface NewsService {
 	int updateNews(News news);
 
 	News getNewsByID(int id);
+
+	int deleteNewsByID(int id);
+
+	News selectNewByID(int id);
 }

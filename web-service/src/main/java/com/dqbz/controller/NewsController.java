@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 
+import javax.servlet.http.HttpServletRequest;
+
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
@@ -57,7 +59,7 @@ public class NewsController {
         news.setMemberid(Integer.parseInt(requestData.getString("memberid")));
         news.setContent(requestData.getString("content"));
 
-       newsService.addNews(news);
+        newsService.addNews(news);
 
         JSONObject jsonObject = new JSONObject();
 
@@ -66,11 +68,48 @@ public class NewsController {
         return jsonObject.toString();
     }
 
-    @RequestMapping(value = "/getNewsByID", method = POST)
-    public @ResponseBody ModelAndView getNewsByID(@RequestBody String data){
+    @RequestMapping(value = "/getNewsByID")
+    public @ResponseBody ModelAndView getNewsByID(HttpServletRequest request){
+
+        String newsID = request.getParameter("newsID");
+
+        return new ModelAndView("updateNews","news",newsService.getNewsByID(Integer.parseInt(newsID)));
+    }
+
+    @RequestMapping(value = "/deleteNewsByID", method = POST)
+    public @ResponseBody String deleteNewsByID(@RequestBody String data){
 
         JSONObject requestData = new JSONObject(data);
 
-        return new ModelAndView("updateNews","news",newsService.getNewsByID(Integer.parseInt(requestData.getString("newsID"))));
+        int newsID = Integer.parseInt(requestData.getString("newsID"));
+
+        newsService.deleteNewsByID(newsID);
+
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("key", "OK");
+
+        return jsonObject.toString();
+    }
+
+    @RequestMapping(value = "/updateNews", method = POST)
+    public @ResponseBody String updateNews(@RequestBody String data) {
+
+        JSONObject requestData = new JSONObject(data);
+
+        int id = Integer.parseInt(requestData.getString("NewsID"));
+
+        News news = newsService.selectNewByID(id);
+        news.setTitle(requestData.getString("title"));
+        news.setMemberid(Integer.parseInt(requestData.getString("memberid")));
+        news.setContent(requestData.getString("content"));
+
+        newsService.updateNews(news);
+
+        JSONObject jsonObject = new JSONObject();
+
+        jsonObject.put("key", "OK");
+
+        return jsonObject.toString();
     }
 }

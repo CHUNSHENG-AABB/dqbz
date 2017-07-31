@@ -17,8 +17,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
  */
 @Controller
 @RequestMapping("/")
-
-public class MemberController {
+class MemberController {
 
 
     @Autowired

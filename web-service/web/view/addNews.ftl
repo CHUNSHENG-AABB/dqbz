@@ -3,7 +3,7 @@
 
 		<div style="margin-bottom: 70px">
 			<label>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作:</label>
-			<input type="button" class="form-control" style="margin-left: 10px" onclick="saveRecord()" value="保存">
+			<input type="button" class="form-control" style="margin-left: 10px" onclick="addNewsRecord()" value="保存">
 			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="updateIntroductionRecord()" id="updateRecord" value="修改">-->
 			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="addRecord()" id="deleteRecord" value="删除">-->
 		</div>
@@ -32,25 +32,11 @@
 	</form>
 </div>
 <script type="text/javascript">
-    var cover_ue = UE.getEditor('cover_editor',{
-        toolbars: [
-            ['simpleupload','cleardoc']
-        ],
-        autoFloatEnabled: false,
-		zIndex:0
-    });
-
-    var text_ue = UE.getEditor('text_editor',{
-        toolbars: [
-            ['justifyleft', 'justifyright', 'justifycenter', 'justifyjustify']
-        ]
-    });
-
 	ue.ready(function() {
 		ue.setContent('');
 	});
 
-	function saveRecord() {
+	function addNewsRecord() {
 		var title = $("#title").val();
 		var member = $("#memberID").val();
 		var content = UE.getEditor('editor').getContent();
@@ -62,45 +48,23 @@
             data: json,
             dataType:'json',
             beforeSend: function () {
+				if(title == ""){
+					alert("请填写标题！");
+					$.abort();
+        		}
                 if(content.length == 0 ){
                     alert("请填写编辑内容！");
                     $.abort();
                 }
             },
-            success:function (result){
-                alert(result['key']);
-            },
-            error: function(result) {
-                alert(result);
-                console.log(result);
-            }
-
-		});
-
-    }
-
-	function updateIntroductionRecord(){
-		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"memberName":$("#memberName").val(),"cover":cover_ue.getContent(),"content":ue.getContent()});
-		$.ajax({
-			type:"post",
-			contentType: "application/json;charset=utf-8",
-			url: "/addMember",
-			data: json,
-			dataType:'json',
-			beforeSend: function () {
-				if(content.length == 0 ){
-					alert("请填写编辑内容！");
-					$.abort();
-				}
-			},
-			success:function (result){
-				alert(result['key']);
-			},
-			error: function(result) {
+        	success: function (result) {
+            	alert(result['key']);
+        	},
+        	error: function (result) {
 				alert(result);
 				console.log(result);
 			}
+
 		});
-	}
+    }
 </script>
