@@ -111,154 +111,12 @@
 		</div>
 		<!-- video-grids -->
 		<div class="video-grids">
-			<div class="col-md-8 video-grids-left">
-				<div class="video-grids-left1">
-					<img src="../images/9.jpg" alt=" " class="img-responsive"/>
-					<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
-						<span> </span>
-					</a>
-					<div class="video-grid-pos">
-						<h3><span>Bellevue</span> Towers in Dubai Downtown UAE</h3>
-						<ul>
-							<li>9:32 <label>|</label></li>
-							<li><i>Adom Smith</i> <label>|</label></li>
-							<li><span>Blogger</span></li>
-						</ul>
-					</div>
-
-					<!-- pop-up-box -->
-					<script type="text/javascript" src="../js/modernizr.custom.min.js"></script>
-					<link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
-					<!--//pop-up-box -->
-					<div id="small-dialog1" class="mfp-hide">
-						<iframe src="" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen
-						        allowfullscreen></iframe>
-					</div>
-
-					<!--<script>-->
-					<!--$(document).ready(function() {-->
-					<!--$('.popup-with-zoom-anim').magnificPopup({-->
-					<!--type: 'inline',-->
-					<!--fixedContentPos: false,-->
-					<!--fixedBgPos: true,-->
-					<!--overflowY: 'auto',-->
-					<!--closeBtnInside: true,-->
-					<!--preloader: false,-->
-					<!--midClick: true,-->
-					<!--removalDelay: 300,-->
-					<!--mainClass: 'my-mfp-zoom-in'-->
-					<!--});-->
-					<!---->
-					<!--});-->
-					<!--</script>-->
-				</div>
-				<div class="video-grids-left2">
-					<div class="course_demo1">
-						<ul id="flexiselDemo1">
-							<li>
-								<div class="item">
-									<img src="../images/10.jpg" alt=" " class="img-responsive"/>
-									<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
-										<i> </i>
-									</a>
-									<div id="small-dialog" class="mfp-hide">
-										<iframe src="" width="500" height="281" frameborder="0" webkitallowfullscreen
-										        mozallowfullscreen allowfullscreen></iframe>
-									</div>
-									<div class="floods-text">
-										<h3>The fed and inequality
-											<span>Blogger <label>|</label> <i>Adom Smith</i></span></h3>
-										<p>5:56</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item">
-									<img src="../images/11.jpg" alt=" " class="img-responsive"/>
-									<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
-										<i> </i>
-									</a>
-									<div id="small-dialog" class="mfp-hide">
-										<iframe src="" width="500" height="281" frameborder="0" webkitallowfullscreen
-										        mozallowfullscreen allowfullscreen></iframe>
-									</div>
-									<div class="floods-text">
-										<h3>The fastest insect in the world
-											<span>Blogger <label>|</label> <i>Adom Smith</i></span></h3>
-										<p>5:56</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="item">
-									<img src="../images/12.jpg" alt=" " class="img-responsive"/>
-									<a class="play-icon popup-with-zoom-anim" href="#small-dialog">
-										<i> </i>
-									</a>
-									<div id="small-dialog" class="mfp-hide">
-										<iframe src="" width="500" height="281" frameborder="0" webkitallowfullscreen
-										        mozallowfullscreen allowfullscreen></iframe>
-									</div>
-									<div class="floods-text">
-										<h3>Billionaires versus
-											Millionaires<span>Blogger <label>|</label> <i>Adom Smith</i></span></h3>
-										<p>5:56</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<!-- pop-up-box -->
-					<script type="text/javascript" src="../js/modernizr.custom.min.js"></script>
-					<link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
-					<!--//pop-up-box -->
-					<script>
-						$(document).ready(function () {
-							$('.popup-with-zoom-anim').magnificPopup({
-								type: 'inline',
-								fixedContentPos: false,
-								fixedBgPos: true,
-								overflowY: 'auto',
-								closeBtnInside: true,
-								preloader: false,
-								midClick: true,
-								removalDelay: 300,
-								mainClass: 'my-mfp-zoom-in'
-							});
-
-						});
-					</script>
-					<!-- requried-jsfiles-for owl -->
-					<script type="text/javascript">
-						$(window).load(function () {
-							$("#flexiselDemo1").flexisel({
-								visibleItems: 3,
-								animationSpeed: 1000,
-								autoPlay: false,
-								pauseOnHover: false,
-								enableResponsiveBreakpoints: false,
-								responsiveBreakpoints: {
-									portrait: {
-										changePoint: 480,
-										visibleItems: 1
-									},
-									landscape: {
-										changePoint: 640,
-										visibleItems: 2
-									},
-									tablet: {
-										changePoint: 768,
-										visibleItems: 3
-									}
-								}
-							});
-
-						});
-					</script>
-					<script type="text/javascript" src="../js/jquery.flexisel.js"></script>
-				</div>
+            <div class="col-md-8 news-grid-left" style="background-color: #f9f9f9">
+                <div class="news-grid-left news-grid-left2">
+                    <h3>视频资料</h3>
+                    <a href="#" style="font-size: 1em">更多</a>
+                </div>
+				<video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls" id="mainVideo" style="width: 100%;"></video>
 			</div>
 			<div class="col-md-4 video-grids-right">
 				<div class="sap_tabs">
@@ -324,19 +182,7 @@
 									</div>
 									<div class="clearfix"></div>
 								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/12.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="orange2">world</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
+
 							</div>
 							<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 								<div class="facts">

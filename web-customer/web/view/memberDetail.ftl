@@ -62,7 +62,7 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/product');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务及收费标准</a>
+				                    <a href="#" onclick="loadPage('/service?memberId=${member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务及收费标准</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -76,14 +76,14 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>联系电话</a>
+				                    <a href="#" onclick="loadPage('/contact?memberId=${member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>联系电话</a>
 			                    </h4>
 		                    </div>
 	                    </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>通知公告</a>
+				                    <a href="#" onclick="loadPage('/notice?memberId=${member.id}')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>通知公告</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
-                <h3>简介</h3>
+                <h3></h3>
                <div id="content">
 				   ${member.content}
 			   </div>

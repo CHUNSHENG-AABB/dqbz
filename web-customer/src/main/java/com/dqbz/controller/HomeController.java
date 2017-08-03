@@ -1,13 +1,7 @@
 package com.dqbz.controller;
 
-import com.dqbz.model.Activity;
-import com.dqbz.model.Association;
-import com.dqbz.model.Member;
-import com.dqbz.model.Product;
-import com.dqbz.service.AssociationService;
-import com.dqbz.service.DemoService;
-import com.dqbz.service.MemberService;
-import com.dqbz.service.ProductService;
+import com.dqbz.model.*;
+import com.dqbz.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestAttribute;
@@ -39,6 +33,12 @@ public class HomeController {
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private ServiceService serviceService;
+
+    @Autowired
+    private NewsService newsService;
 
     @RequestMapping(value = "/")
     public ModelAndView index() {
@@ -122,6 +122,35 @@ public class HomeController {
         List<Product> products = productService.getAllProduct(memberId);
 
         return new ModelAndView("product", "products", products);
+
+    }
+
+
+    /**
+     * 会员单位--服务及收费标准
+     * @param memberId
+     * @return
+     */
+    @RequestMapping(value = "/service")
+    public ModelAndView service(@RequestParam("memberId") Integer memberId){
+
+        Service service = serviceService.getServiceByMemberId(memberId);
+        return new ModelAndView("service", "service", service);
+    }
+
+
+    @RequestMapping(value = "/contact")
+    public ModelAndView contact(@RequestParam("memberId") Integer memberId){
+
+        Member member = memberService.getMemberById(Integer.valueOf(memberId));
+        return new ModelAndView("contact", "member", member);
+    }
+
+    @RequestMapping(value = "/notice")
+    public ModelAndView news(@RequestParam("memberId") Integer memberId){
+
+        List<News> news = newsService.getNewsByMemberId(memberId);
+        return new ModelAndView("notice", "news", news);
 
     }
 

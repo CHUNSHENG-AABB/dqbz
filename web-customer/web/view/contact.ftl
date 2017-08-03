@@ -1,0 +1,3 @@
+<div>
+    ${member.contact}
+</div>
