@@ -14,11 +14,18 @@
 
 		<div style="margin-bottom: 20px">
 			<label style="width: 70px">会员头像:</label>
-			<div id="cover_editor" style="width: 230px; height: 160px"></div>
+            <input type="text" class="form-control" id="cover_editor" value="">
 		</div>
 
-		<div>
-			<label>会员简介:</label>
+        <div>
+            <label>会员简介:</label>
+			<div>
+                <textarea id="memberIntro" class="form-control" style="width: 1000px; height: 100px"></textarea>
+			</div>
+        </div>
+
+		<div style="margin-top: 20px">
+			<label>会员介绍:</label>
 			<#include "editor.ftl"/>
 		</div>
 
@@ -26,7 +33,7 @@
             <label>联系电话:</label>
             <#--<div id="text_editor" style="width: 230px; height: 160px"></div>-->
 			<div>
-                <textarea name="phoneInfo" style="width: 300px; height: 50px"></textarea>
+                <textarea id="phoneInfo" class="form-control" style="width: 300px; height: 50px"></textarea>
 			</div>
 
         </div>
@@ -53,7 +60,7 @@
 
 	function updateIntroductionRecord(){
 		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"memberName":$("#memberName").val(),"cover":cover_ue.getContent(),"content":ue.getContent()});
+		var json = JSON.stringify({"memberName":$("#memberName").val(),"cover":$("#cover_editor").val(),"content":ue.getContent(),"memberIntro":$("#memberName").val(),"memberIntro":$("#memberIntro").val(),"contact":$("#phoneInfo").val()});
 		$.ajax({
 			type:"post",
 			contentType: "application/json;charset=utf-8",
@@ -68,6 +75,7 @@
 			},
 			success:function (result){
 				alert(result['key']);
+                loadPage('memberList');
 			},
 			error: function(result) {
 				alert(result);

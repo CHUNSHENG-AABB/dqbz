@@ -7,6 +7,8 @@ import com.dqbz.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MemberServiceImpl implements MemberService{
 
@@ -19,7 +21,7 @@ public class MemberServiceImpl implements MemberService{
     }
 
     @Override
-    public Member getMember(int id){
+    public MemberWithBLOBs getMember(int id){
 
         return memberMapper.selectByPrimaryKey(id);
     }
@@ -28,5 +30,21 @@ public class MemberServiceImpl implements MemberService{
     public Integer saveMember(Member member){
 
         return memberMapper.updateByPrimaryKeyWithBLOBs(member);
+    }
+
+    @Override
+    public List<Member> selectAllMember(){
+
+        return memberMapper.selectAllMember();
+    }
+
+    @Override
+    public int deleteMemberByID(int id){
+        return memberMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int updateMember(MemberWithBLOBs member){
+        return memberMapper.updateByPrimaryKeySelective(member);
     }
 }

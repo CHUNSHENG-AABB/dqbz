@@ -1,9 +1,7 @@
 package com.dqbz.controller;
 
 import com.dqbz.model.Association;
-import com.dqbz.model.MemberWithBLOBs;
 import com.dqbz.service.AssociationService;
-import com.dqbz.service.MemberService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +18,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
  */
 @Controller
 @RequestMapping("/")
-class AssociationController {
+public class AssociationController {
 
     @Autowired
     private AssociationService associationService;
