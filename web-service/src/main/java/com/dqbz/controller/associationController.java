@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
@@ -23,8 +18,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
  */
 @Controller
 @RequestMapping("/")
-
-public class ServiceController {
+public class AssociationController {
 
     @Autowired
     private AssociationService associationService;
@@ -51,6 +45,16 @@ public class ServiceController {
     @RequestMapping(value = "/ueditor")
     public String ueditor(){
         return "editor";
+    }
+
+    @RequestMapping(value = "/cover_editor")
+    public String coverEditor(){
+        return "cover_editor";
+    }
+
+    @RequestMapping(value = "/member_info")
+    public String memberInfo(){
+        return "member_info";
     }
 
 
@@ -82,33 +86,8 @@ public class ServiceController {
 
         JSONObject jsonObject = new JSONObject();
 
-        jsonObject.put("key", "修改成功");
+        jsonObject.put("key", "OK");
 
         return jsonObject.toString();
-    }
-
-    @RequestMapping(value = "/greenStyle")
-    public String greenStyle(){
-        return "greenStyle";
-    }
-
-    @RequestMapping(value = "/traditionStyle")
-    public String traditionStyle(){
-        return "traditionStyle";
-    }
-
-    @RequestMapping(value = "/professionStyle")
-    public String professionStyle(){
-        return "professionStyle";
-    }
-
-    @RequestMapping(value = "/activity")
-    public String activity(){
-        return "activity";
-    }
-
-    @RequestMapping(value = "/serviceCenter")
-    public String serviceCenter(){
-        return "serviceCenter";
     }
 }

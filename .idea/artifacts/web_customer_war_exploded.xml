@@ -30,8 +30,8 @@
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.7" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.7" />
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
+          <element id="library" level="project" name="Maven: org.json:json:20160810" />
         </element>
-        <element id="file-copy" path="$PROJECT_DIR$/web-customer/web/WEB-INF/web.xml" />
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/web-customer/target/web-customer/META-INF/MANIFEST.MF" />
