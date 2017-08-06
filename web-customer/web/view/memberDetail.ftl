@@ -17,7 +17,6 @@
     <!-- js -->
     <script src="../js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript">
         function loadPage(pageLink) {

@@ -17,7 +17,6 @@
     <!-- js -->
     <script src="../js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -57,8 +56,8 @@
 
 
             <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
-                <h3>${activity.title}</h3>
                 <div id="content">
+                    <h3>${activity.title}</h3>
                     ${activity.content}
                 </div>
             </div>
