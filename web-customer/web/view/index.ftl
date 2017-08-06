@@ -54,34 +54,16 @@
 		<div id="top" class="callbacks_container">
 			<ul class="rslides" id="slider3">
 				<li>
-					<img src="../images/lfgm_door.jpg">
-					<!--<div class="banner-info-slider">-->
-					<!--<ul>-->
-					<!--<li><a href="">sports</a></li>-->
-					<!--<li>30 Aug 2016</li>-->
-					<!--</ul>-->
-					<!--<h3>Portfolio of Agency</h3>-->
-					<!--<p>Lorem ipsum dolor sit amet adipiscing elit.-->
-					<!--<span>By <i>ullamcoman</i> and <i>Micheal smithjos.</i></span></p>-->
-					<!--<div class="more">-->
-					<!--<a href="" class="type-1">-->
-					<!--<span> Read More </span>-->
-					<!--<span> Read More </span>-->
-					<!--</a>-->
-					<!--</div>-->
-					<!--</div>-->
+					<img src="../images/door1.jpg">
 				</li>
 				<li>
-					<img src="../images/2202.jpg">
+					<img src="../images/door2.jpg">
 				</li>
 				<li>
-					<img src="../images/2202.jpg">
+					<img src="../images/door3.jpg">
 				</li>
 				<li>
-					<img src="../images/2202.jpg">
-				</li>
-				<li>
-					<img src="../images/2202.jpg">
+					<img src="../images/door4.jpg">
 				</li>
 			</ul>
 		</div>
@@ -255,8 +237,8 @@
 
 			<#list entity.members as member>
 
-				<div class="col-md-3 banner-bottom-grid-left" style="background:url(../images/lfgm.jpg) no-repeat 0px 0px;">
-					<div class="br-bm-gd-lt">
+				<div class="col-md-3 banner-bottom-grid-left" style="background:url(../images/lfgm.jpg) no-repeat 0px 0px;padding-left:0px;margin-top: 1em;">
+					<div class="br-bm-gd-lt" style="width: 255px;">
 						<div class="overlay">
 							<div class="arrow-left"></div>
 							<div class="rectangle"></div>

@@ -56,8 +56,8 @@
 
 
             <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
-                <h3>${activity.title}</h3>
                 <div id="content">
+                    <h3>${activity.title}</h3>
                     ${activity.content}
                 </div>
             </div>
