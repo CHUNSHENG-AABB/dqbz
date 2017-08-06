@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>News & Events</title>
+    <title>大庆市殡葬协会</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
@@ -42,55 +42,55 @@
 
 
             <div class="col-md-4 upcoming-events-right" style="padding-left: 0px; width: 25%">
-                <h3>${member.name}</h3>
+                <h3>${entity.member.name}</h3>
                 <div class="banner-bottom-video-grid-left">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="/memberDetail?id=${member.id}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>简介</a>
+				                    <a href="/memberDetail?id=${entity.member.id}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>简介</a>
 			                    </h4>
 		                    </div>
 	                    </div>
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
-                                    <a href="#" onclick="loadPage('/product?memberId=${member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>产品介绍及价格</a>
+                                    <a href="#" onclick="loadPage('/product?memberId=${entity.member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>产品介绍及价格</a>
                                 </h4>
                             </div>
                         </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/service?memberId=${member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务及收费标准</a>
+				                    <a href="#" onclick="loadPage('/service?memberId=${entity.member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>服务及收费标准</a>
 			                    </h4>
 		                    </div>
 	                    </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>宣传展示</a>
+				                    <a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>宣传展示</a>
 			                    </h4>
 		                    </div>
 	                    </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/contact?memberId=${member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>联系电话</a>
+				                    <a href="#" onclick="loadPage('/contact?memberId=${entity.member.id}');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>联系电话</a>
 			                    </h4>
 		                    </div>
 	                    </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/notice?memberId=${member.id}')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>通知公告</a>
+				                    <a href="#" onclick="loadPage('/notice?memberId=${entity.member.id}')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>通知公告</a>
 			                    </h4>
 		                    </div>
 	                    </div>
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="collapseFour">
 			                    <h4 class="panel-title">
-				                    <a href=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>网上祭祀</a>
+				                    <a href="#" onclick="loadPage('/fete')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>网上祭祀</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -101,7 +101,8 @@
             <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
                 <h3></h3>
                <div id="content">
-				   ${member.content}
+				   ${entity.member.content}
+				   <input id="hidd" style="display: none" value="${entity.page}"/>
 			   </div>
             </div>
             <div class="clearfix"></div>
@@ -111,7 +112,16 @@
 </div>
 <!-- //news-and-events -->
 <!-- footer -->
-
+<script>
+	$(document).ready(function () {
+		var page = $("#hidd").val();
+		if(page == "product"){
+            loadPage('/product?memberId=${entity.member.id}');
+		}else if (page == "service"){
+            loadPage('/service?memberId=${entity.member.id}');
+		}
+    });
+</script>
 <!-- //footer -->
 <!-- for bootstrap working -->
 <script src="../js/bootstrap.js"></script>

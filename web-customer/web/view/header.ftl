@@ -44,11 +44,11 @@
 
 						<!--</ul>-->
 						<!--</li>-->
-						<li><a href="../greenStyle">绿色殡葬</a></li>
-						<li><a href="../traditionStyle">殡葬及传统文化</a></li>
-						<li><a href="../professionStyle">行业管理</a></li>
+						<li><a href="../article?type=1">绿色殡葬</a></li>
+						<li><a href="../article?type=2">殡葬及传统文化</a></li>
+						<li><a href="../article?type=4">行业管理</a></li>
 						<li><a href="../activity">活动通知</a></li>
-						<li><a href="../serviceCenter">服务中心</a></li>
+						<li><a href="../article?type=6">服务中心</a></li>
 					</ul>
 				</div>
 			</nav>

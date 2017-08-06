@@ -3,6 +3,8 @@ package com.dqbz.dao;
 import com.dqbz.model.Activity;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public interface ActivityMapper {
     /**
@@ -61,5 +63,9 @@ public interface ActivityMapper {
      */
     int updateByPrimaryKey(Activity record);
 
-    Activity selectAll();
+    List<Activity> selectAll();
+
+    List<Activity> selectAllByTime(Date now);
+
+    List<Activity> selectAllByTimeOver(Date now);
 }

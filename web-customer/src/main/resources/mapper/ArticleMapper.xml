@@ -59,6 +59,7 @@
     <include refid="Blob_Column_List" />
     from article
     where TYPE = #{type,jdbcType=VARCHAR}
+    LIMIT 1
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >

@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Home</title>
+	<title>大庆市殡葬协会</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content=""/>
@@ -128,128 +128,46 @@
 							</li>
 							<div class="clear"></div>
 						</ul>
+
+
+
+
 						<div class="resp-tabs-container">
 							<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/10.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#">清明祭奠</a> <label>|</label></li>
-											<li>2017年7月7日</li>
-										</ul>
-										<p><a href="#">清明祭扫，黄纸换鲜花</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/11.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="green">international</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/12.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="orange">general</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/10.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="orange1">business</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-
+								<#list entity.activities_doing as activities_doing>
+                                    <div class="facts">
+                                        <div class="tab_list">
+											${activities_doing.cover}
+                                        </div>
+                                        <div class="tab_list1">
+                                            <ul>
+                                                <li><a href="/activityDetail?id=${activities_doing.id}">${activities_doing.title}</a> <label></label></li>
+                                                <li>开始时间：${activities_doing.beginTime?string('yyyy-MM-dd')}</li>
+                                                <li>结束时间：${activities_doing.endTime?string('yyyy-MM-dd')}</li>
+                                            </ul>
+                                            <p><a href="#">${activities_doing.introduction}</a></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+								</#list>
 							</div>
 							<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/12.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#">Blogger</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/11.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="orange1">business</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/10.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="orange2">world</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/12.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="green">international</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="facts">
-									<div class="tab_list">
-										<img src="../images/11.jpg" alt=" " class="img-responsive"/>
-									</div>
-									<div class="tab_list1">
-										<ul>
-											<li><a href="#" class="orange">general</a> <label>|</label></li>
-											<li>30.03.2016</li>
-										</ul>
-										<p><a href="#">Nam libero tempore, cum soluta nobis.</a></p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
+							<#list entity.activities_ended as activities_ended>
+                                <div class="facts">
+                                    <div class="tab_list">
+										${activities_ended.cover}
+                                    </div>
+                                    <div class="tab_list1">
+                                        <ul>
+                                            <li><a href="/activityDetail?id=${activities_ended.id}">${activities_ended.title}</a> <label></label></li>
+                                            <li>开始时间：${activities_ended.beginTime?string('yyyy-MM-dd')}</li>
+                                            <li>结束时间：${activities_ended.endTime?string('yyyy-MM-dd')}</li>
+                                        </ul>
+                                        <p><a href="#">${activities_ended.introduction}</a></p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+							</#list>
 							</div>
 						</div>
 						<script src="../js/easyResponsiveTabs.js" type="text/javascript"></script>
@@ -274,69 +192,20 @@
 		<div class="news">
 			<div class="news-grids">
 				<div class="col-md-8 news-grid-left" style="background-color: #f9f9f9">
-					<h3>新闻资讯</h3>
+                    <div class="news-grid-left news-grid-left2">
+                        <h3>新闻资讯</h3>
+                        <a href="news" style="font-size: 1em">更多</a>
+                    </div>
 					<ul>
-						<li>
-							<div class="news-grid-left1">
-								<img src="../images/16.jpg" alt=" " class="img-responsive"/>
-							</div>
-							<div class="news-grid-right1">
-								<h4><a href="">Mexico's oil giant is in uncharted waters</a></h4>
-								<h5>By <a href="#">Elizibeth Malkin</a> <label>|</label> <i>30.03.2016</i></h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-							<div class="clearfix"></div>
-						</li>
-						<li>
-							<div class="news-grid-left1">
-								<img src="../images/17.jpg" alt=" " class="img-responsive"/>
-							</div>
-							<div class="news-grid-right1">
-								<h4><a href="">second wave of votes to legalize marijuana</a></h4>
-								<h5>By <a href="#">james smith</a> <label>|</label> <i>30.03.2016</i></h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-							<div class="clearfix"></div>
-						</li>
-						<li>
-							<div class="news-grid-left1">
-								<img src="../images/13.jpg" alt=" " class="img-responsive"/>
-							</div>
-							<div class="news-grid-right1">
-								<h4><a href="">Antares rocket, bound for space station, explodes</a></h4>
-								<h5>By <a href="#">Michael Drew</a> <label>|</label> <i>30.03.2016</i></h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-							<div class="clearfix"></div>
-						</li>
-						<li>
-							<div class="news-grid-left1">
-								<img src="../images/12.jpg" alt=" " class="img-responsive"/>
-							</div>
-							<div class="news-grid-right1">
-								<h4><a href="">stronger family bonds, two years after hurricane sandy</a>
-								</h4>
-								<h5>By <a href="#">james smith</a> <label>|</label> <i>30.03.2016</i></h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-							<div class="clearfix"></div>
-						</li>
-						<li>
-							<div class="news-grid-left1">
-								<img src="../images/15.jpg" alt=" " class="img-responsive"/>
-							</div>
-							<div class="news-grid-right1">
-								<h4><a href="">royal crush giants and force game 7</a></h4>
-								<h5>By <a href="#">Michael Drew</a> <label>|</label> <i>30.03.2016</i></h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-							<div class="clearfix"></div>
-						</li>
+						<#list entity.news as new>
+                            <li>
+                                <div class="news-grid-right1" style="float: left;width: 700px;margin-top: 0.5em">
+                                    <h4><a href="/newDetail?newId=${new.id}">${new.title}</a></h4>
+									<div style="float: right">${new.inputTime?string('yyyy-MM-dd HH:mm:ss')}</div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+						</#list>
 					</ul>
 				</div>
 				<div class="col-md-4 news-grid-right">
@@ -350,14 +219,7 @@
 							<!--<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">edit location</a></li>-->
 						</ul>
 
-						<!-- Tab panes -->
-						<div class="news-grid-rght3">
-							<img src="../images/18.jpg" alt=" " class="img-responsive"/>
-							<div class="story">
-								<p>story of the week</p>
-								<h3><a href="">US hails west Africa Ebola progress</a></h3>
-							</div>
-						</div>
+
 					</div>
 					<div class="news-grid-rght2" style="height: 450px">
 						<p>请填写信息</p>
@@ -385,376 +247,54 @@
 		</div>
 		<!-- //news-and-events -->
 		<!-- video-bottom-grids -->
-		<div class="video-bottom-grids" style="background-color: #f9f9f9">
-			<div class="video-bottom-grids1">
-				<div class="col-md-3 video-bottom-grid">
-					<div class="video-bottom-grid1">
-						<div class="video-bottom-grid1-before">
-							<div class="news-grid-left news-grid-left2">
-								<h3>关于协会</h3>
-								<a href="../association">更多</a>
-							</div>
-						</div>
-						<ul>
-							<li><a href="#">vel illum qui dolorem eum fugiat quo voluptas.</a></li>
-							<li><a href="#">Itaque earum rerum hic tenetur a sapiente delectus.</a></li>
-							<li><a href="#"> Neque porro quisquam est, qui dolor sit amet.</a></li>
-							<li><a href="#">But I must explain to you how all this mistaken.</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3 video-bottom-grid">
-					<div class="video-bottom-grid1">
-						<div class="video-bottom-grid1-before">
-							<div class="news-grid-left news-grid-left2">
-								<h3>绿色殡葬</h3>
-								<a href="../greenStyle">更多</a>
-							</div>
-						</div>
-						<ul>
-							<li><a href="#">vel illum qui dolorem eum fugiat quo voluptas.</a></li>
-							<li><a href="#">Itaque earum rerum hic tenetur a sapiente delectus.</a></li>
-							<li><a href="#"> Neque porro quisquam est, qui dolor sit amet.</a></li>
-							<li><a href="#">But I must explain to you how all this mistaken.</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3 video-bottom-grid">
-					<div class="video-bottom-grid1">
-						<div class="video-bottom-grid1-before">
-							<div class="news-grid-left news-grid-left2">
-								<h3>殡葬传统文化</h3>
-								<a href="../traditionStyle">更多</a>
-							</div>
-						</div>
-						<ul>
-							<li><a href="#">vel illum qui dolorem eum fugiat quo voluptas.</a></li>
-							<li><a href="#">Itaque earum rerum hic tenetur a sapiente delectus.</a></li>
-							<li><a href="#"> Neque porro quisquam est, qui dolor sit amet.</a></li>
-							<li><a href="#">But I must explain to you how all this mistaken.</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3 video-bottom-grid">
-					<div class="video-bottom-grid1">
-						<div class="video-bottom-grid1-before">
-							<div class="news-grid-left news-grid-left2">
-								<h3>行业规范</h3>
-								<a href="../professionStyle">更多</a>
-							</div>
-						</div>
-						<ul>
-							<li><a href="#">vel illum qui dolorem eum fugiat quo voluptas.</a></li>
-							<li><a href="#">Itaque earum rerum hic tenetur a sapiente delectus.</a></li>
-							<li><a href="#"> Neque porro quisquam est, qui dolor sit amet.</a></li>
-							<li><a href="#">But I must explain to you how all this mistaken.</a></li>
-						</ul>
-					</div>
-				</div>
-				<!--<div class="col-md-3 video-bottom-grid">-->
-				<!--<div class="video-bottom-grid1">-->
-				<!--<div class="video-bottom-grid1-before before3">-->
-				<!--<img src="../images/16.jpg" alt=" " class="img-responsive" />-->
-				<!--<div class="video-bottom-grid1-pos">-->
-				<!--<p>Lorem ipsum dolor sit amet adipiscing. </p>-->
-				<!--</div>-->
-				<!--</div>-->
-				<!--<ul class="list2">-->
-				<!--<li><a href="#">vel illum qui dolorem eum fugiat quo voluptas.</a></li>-->
-				<!--<li><a href="#">Itaque earum rerum hic tenetur a sapiente delectus.</a></li>-->
-				<!--<li><a href="#"> Neque porro quisquam est, qui dolor sit amet.</a></li>-->
-				<!--<li><a href="#">But I must explain to you how all this mistaken.</a></li>-->
-				<!--</ul>-->
-				<!--<div class="read-more res2">-->
-				<!--<a href="">Read more in Blogger</a>-->
-				<!--</div>-->
-				<!--</div>-->
-				<!--</div>-->
-				<div class="clearfix"></div>
-			</div>
 
-		</div>
 
 		<div class="banner-bottom-grids">
 			<div class="container col-md-12 news-grid-left" style="margin-top:20px;margin-bottom:20px;">
 				<h3>会员单位</h3>
 			</div>
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
 
-							</ul>
+			<#list entity.members as member>
+
+				<div class="col-md-3 banner-bottom-grid-left" style="background:url(../images/lfgm.jpg) no-repeat 0px 0px;">
+					<div class="br-bm-gd-lt">
+						<div class="overlay">
+							<div class="arrow-left"></div>
+							<div class="rectangle"></div>
+						</div>
+						<div class="health-pos">
+							<div class="health">
+								<ul>
+									<li>
+										<a href="../memberDetail?id=${member.id}&page=product">产品列表</a>
+										<a href="../memberDetail?id=${member.id}&page=service">收费标准</a>
+									</li>
+								</ul>
+							</div>
+							<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
+							<div class="dummy">
+								<p>${member.introduction}</p>
+								<div class="health"
+									 style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
+									<a href="../memberDetail?id=${member.id}&page=home">${member.name}</a>
+								</div>
+							</div>
+							<div class="com-heart">
+								<ul>
+									<li>
+										<a href="../memberDetail?id=${member.id}&page=home">${member.name}</a>
+									</li>
+
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
+			</#list>
 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="banner-bottom-grids" style="margin-top: 20px">
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 banner-bottom-grid-left">
-				<div class="br-bm-gd-lt">
-					<div class="overlay">
-						<div class="arrow-left"></div>
-						<div class="rectangle"></div>
-					</div>
-					<div class="health-pos">
-						<div class="health">
-							<ul>
-								<li>
-									<a href="">产品列表</a>
-									<a href="">收费标准</a>
-								</li>
-							</ul>
-						</div>
-						<p style="text-align: center;font-style: inherit;color: white">&nbsp;</p>
-						<div class="dummy">
-							<p>这里是世俗喧嚣的终结，这里是理想的世外桃源，这里是人生理想的后花园，这就是作为逝者长眠之地、生者祭祀追源之所的大庆市龙凤公墓</p>
-							<div class="health"
-							     style="text-align: center;background-color: #5e5e5e;padding: 0.5em 0 0.5em 0;margin-top: 10px; ">
-								<a href="">大庆市龙凤公墓</a>
-							</div>
-						</div>
-						<div class="com-heart">
-							<ul>
-								<li>
-									<a href="#">龙凤公墓</a>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
+            <div class="clearfix"></div>
 		</div>
 	</div>
 	<div class="footer" style="text-align: center;margin-top: 25px">

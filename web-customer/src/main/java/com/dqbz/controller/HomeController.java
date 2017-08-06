@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,9 +22,6 @@ import java.util.Map;
 @Controller
 @RequestMapping("/")
 public class HomeController {
-
-    @Autowired
-    private DemoService demoService;
 
     @Autowired
     private MemberService memberService;
@@ -40,14 +38,12 @@ public class HomeController {
     @Autowired
     private NewsService newsService;
 
-    @RequestMapping(value = "/")
-    public ModelAndView index() {
+    @Autowired
+    private ActivityService activityService;
 
-        Activity activity = demoService.getAllActivity();
-        Map map = new HashMap();
-        map.put("aa", "kkk");
-        return new ModelAndView("index", "a", map);
-    }
+    @Autowired
+    private ArticleService articleService;
+
 
     @RequestMapping(value = "/members")
     public ModelAndView members() {
@@ -74,26 +70,22 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/memberDetail")
-    public ModelAndView memberDetail(@RequestParam("id") Integer id) {
+    public ModelAndView memberDetail(@RequestParam("id") Integer id, @RequestParam("page") String page) {
 
+        page = page == null?"":page;
         Member member = memberService.getMemberById(Integer.valueOf(id));
-        return new ModelAndView("memberDetail", "member", member);
+
+        Map map = new HashMap();
+        map.put("page", page);
+        map.put("member", member);
+        return new ModelAndView("memberDetail", "entity", map);
     }
 
-    @RequestMapping(value = "/news")
-    public String news() {
-        return "news";
-    }
 
-    @RequestMapping(value = "/greenStyle")
-    public String greenStyle() {
-        return "greenStyle";
-    }
 
-    @RequestMapping(value = "/traditionStyle")
-    public String traditionStyle() {
-        return "traditionStyle";
-    }
+
+
+
 
     @RequestMapping(value = "/professionStyle")
     public String professionStyle() {
@@ -108,6 +100,11 @@ public class HomeController {
     @RequestMapping(value = "/serviceCenter")
     public String serviceCenter() {
         return "serviceCenter";
+    }
+
+    @RequestMapping(value = "/fete")
+    public String fete() {
+        return "fete";
     }
 
 
@@ -153,5 +150,95 @@ public class HomeController {
         return new ModelAndView("notice", "news", news);
 
     }
+
+    @RequestMapping(value = "/doingActivity")
+    public ModelAndView doingActivity(){
+
+        List<Activity> activities = activityService.getDoingActivity(new Date());
+        return new ModelAndView("doingActivity", "activities", activities);
+
+    }
+
+    @RequestMapping(value = "/endedActivity")
+    public ModelAndView endedActivity(){
+
+        List<Activity> activities = activityService.getEndedActivity(new Date());
+        return new ModelAndView("endedActivity", "activities", activities);
+
+    }
+
+    @RequestMapping(value = "/activityDetail")
+    public ModelAndView activityDetail(@RequestParam("id") Integer id){
+
+        Activity activity = activityService.getActivityById(id);
+        return new ModelAndView("activityDetail", "activity", activity);
+
+    }
+
+    /**
+     * 新闻资讯
+     * @return
+     */
+    @RequestMapping(value = "/news")
+    public String news() {
+        return "news";
+    }
+
+    /**
+     * 历届会议
+     * @return
+     */
+    @RequestMapping(value = "/meeting")
+    public ModelAndView meeting() {
+
+        List<News> news = newsService.getAllByType("1");
+
+        return new ModelAndView("meeting", "news", news);
+    }
+
+    /**
+     * 新闻资讯
+     * @return
+     */
+    @RequestMapping(value = "/information")
+    public ModelAndView information() {
+
+        List<News> news = newsService.getAllByType("2");
+
+        return new ModelAndView("information", "news", news);
+    }
+
+
+    /**
+     * 新闻详情
+     * @return
+     */
+    @RequestMapping(value = "/newDetail")
+    public ModelAndView newDetail(@RequestParam("newId") Integer newId) {
+
+        News news = newsService.getById(newId);
+
+        return new ModelAndView("newDetail", "news", news);
+    }
+
+    @RequestMapping(value = "/article")
+    public ModelAndView greenStyle(@RequestParam("type") String type) {
+
+        Article article = articleService.getArticleListByType(type);
+
+        if ("1".equals(type)){
+            return new ModelAndView("greenStyle", "article", article);
+        }if ("2".equals(type) || "3".equals(type)){
+            return new ModelAndView("traditionStyle", "article", article);
+        }if ("4".equals(type) || "5".equals(type)){
+            return new ModelAndView("professionStyle", "article", article);
+        }if ("6".equals(type) || "7".equals(type) || "8".equals(type) || "9".equals(type)){
+            return new ModelAndView("serviceCenter", "article", article);
+        }else{
+            return new ModelAndView("article", "article", article);
+        }
+
+    }
+
 
 }

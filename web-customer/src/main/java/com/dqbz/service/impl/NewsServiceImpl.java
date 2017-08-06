@@ -23,4 +23,19 @@ public class NewsServiceImpl implements NewsService {
         return newsMapper.selectByMemberId(memberId);
     }
 
+    @Override
+    public List<News> getNewsSixRecord() {
+        return newsMapper.selectSix();
+    }
+
+    @Override
+    public List<News> getAllByType(String type) {
+        return newsMapper.selectAllByType(type);
+    }
+
+    @Override
+    public News getById(Integer newId) {
+        return newsMapper.selectByPrimaryKey(newId);
+    }
+
 }

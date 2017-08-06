@@ -34,30 +34,46 @@
 
 
             <div class="col-md-4 upcoming-events-right" style="padding-left: 0px; width: 25%">
-                <h3>绿色殡葬</h3>
+                <h3>活动通知</h3>
                 <div class="banner-bottom-video-grid-left">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-	                    <div class="panel panel-default">
-		                    <div class="panel-heading" role="tab" id="headingTwo">
-			                    <h4 class="panel-title">
-				                    <a href="../article?type=1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>文明祭祀</a>
-			                    </h4>
-		                    </div>
-	                    </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a href="#" onclick="loadPage('/doingActivity');" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>进行中活动</a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a href="#" onclick="loadPage('/endedActivity');" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>已结束活动</a>
+                                </h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
 
             <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
-                <h3>${article.title}</h3>
-                ${article.introduction}
+                <h3>${activity.title}</h3>
+                <div id="content">
+                    ${activity.content}
+                </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
     </div>
 </div>
+
+<script type="text/javascript">
+    function loadPage(pageLink) {
+        $("#content").html(null);
+        $("#content").load(pageLink);
+    }
+</script>
 <!-- //news-and-events -->
 <!-- footer -->
 
