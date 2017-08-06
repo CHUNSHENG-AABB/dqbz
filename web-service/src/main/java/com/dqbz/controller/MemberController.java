@@ -53,6 +53,7 @@ public class MemberController {
         MemberWithBLOBs member = new MemberWithBLOBs();
 
         member.setName(requestData.getString("memberName"));
+        System.out.println(requestData.getString("cover"));
         member.setCover(requestData.getString("cover"));
         member.setIntroduction(requestData.getString("memberIntro"));
         member.setContent(requestData.getString("content"));
