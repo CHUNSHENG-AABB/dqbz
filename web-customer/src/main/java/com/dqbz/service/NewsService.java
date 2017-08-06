@@ -9,6 +9,12 @@ import java.util.List;
  */
 public interface NewsService {
 
-    public List<News> getNewsByMemberId(Integer memberId);
+    List<News> getNewsByMemberId(Integer memberId);
+
+    List<News> getNewsSixRecord();
+
+    List<News> getAllByType(String type);
+
+    News getById(Integer newId);
 
 }

@@ -4,7 +4,7 @@
 
     <li>
         <div class="news-grid-left1">
-            <img src="${product.cover}" alt=" " class="img-responsive"/>
+            ${product.cover}
         </div>
         <div class="news-grid-right1">
             <h4><a href="#">${product.name}</a></h4>

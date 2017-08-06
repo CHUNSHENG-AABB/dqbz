@@ -18,6 +18,16 @@
     <script src="../js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+        function loadPage(pageLink) {
+            $("#content").html(null);
+            $("#content").load(pageLink);
+        }
+
+
+    </script>
+
 </head>
 
 <body>
@@ -34,13 +44,20 @@
 
 
             <div class="col-md-4 upcoming-events-right" style="padding-left: 0px; width: 25%">
-                <h3>绿色殡葬</h3>
+                <h3>新闻资讯</h3>
                 <div class="banner-bottom-video-grid-left">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="../article?type=1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>文明祭祀</a>
+				                    <a href="#" onclick="loadPage('/meeting');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>历届会议</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href="#" onclick="loadPage('/information');"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>活动资讯</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -49,9 +66,9 @@
             </div>
 
 
-            <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
-                <h3>${article.title}</h3>
-                ${article.introduction}
+            <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9" id="content">
+                <h3>${news.title}</h3>
+                ${news.content}
             </div>
             <div class="clearfix"></div>
         </div>

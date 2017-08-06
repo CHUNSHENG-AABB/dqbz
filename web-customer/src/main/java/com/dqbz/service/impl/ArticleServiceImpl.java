@@ -18,7 +18,7 @@ public class ArticleServiceImpl implements ArticleService {
 	private ArticleMapper articleMapper;
 
 	@Override
-	public List<Article> getArticleListByType(String type) {
+	public Article getArticleListByType(String type) {
 
 		return articleMapper.selectByType(type);
 	}

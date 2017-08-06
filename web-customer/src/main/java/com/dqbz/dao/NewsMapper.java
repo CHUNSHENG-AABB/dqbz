@@ -37,6 +37,10 @@ public interface NewsMapper {
      */
     News selectByPrimaryKey(Integer id);
 
+    List<News> selectSix();
+
+    List<News> selectAllByType(String type);
+
     List<News> selectByMemberId(Integer memberId);
 
     /**

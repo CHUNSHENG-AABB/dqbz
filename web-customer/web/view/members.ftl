@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>News & Events</title>
+    <title>大庆市殡葬协会</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
@@ -17,7 +17,7 @@
     <!-- js -->
     <script src="../js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <#--<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>-->
 </head>
 
 <body>
@@ -43,10 +43,11 @@
 
                         <li>
                             <div class="news-grid-left1">
-                                <img src="${member.cover}" alt=" " class="img-responsive"/>
+                                ${member.cover}
+                                <#--<img src="${member.cover}" alt=" " class="img-responsive"/>-->
                             </div>
                             <div class="news-grid-right1">
-                                <h4><a href="../memberDetail?id=${member.id}">${member.name}</a></h4>
+                                <h4><a href="../memberDetail?id=${member.id}&page=home">${member.name}</a></h4>
                                 <p>${member.introduction}</p>
                             </div>
                             <div class="clearfix"></div>
