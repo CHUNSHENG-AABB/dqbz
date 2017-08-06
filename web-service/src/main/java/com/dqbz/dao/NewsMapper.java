@@ -67,4 +67,6 @@ public interface NewsMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(News record);
+
+    List<News> getNewsByType(String type);
 }

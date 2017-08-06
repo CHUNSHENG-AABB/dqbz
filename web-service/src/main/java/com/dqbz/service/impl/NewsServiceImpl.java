@@ -46,4 +46,9 @@ public class NewsServiceImpl implements NewsService{
         return newsMapper.selectByPrimaryKey(id);
     }
 
+    @Override
+    public List<News> getNewsByType(String type){
+
+        return newsMapper.getNewsByType(type);
+    }
 }

@@ -3,13 +3,17 @@ package com.dqbz.service;
 import com.dqbz.model.Member;
 import com.dqbz.model.News;
 
+import java.util.List;
+
 
 /**
  * Created by o on 2017/7/23.
  */
 public interface NewsService {
 
-	java.util.List<News> getAllNews();
+	List<News> getAllNews();
+
+	List<News> getNewsByType(String type);
 
 	int addNews(News news);
 

@@ -50,15 +50,6 @@
     CONTENT
   </sql>
 
-
-
-
-
-
-
-
-
-
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     <!--
       WARNING - @mbggenerated

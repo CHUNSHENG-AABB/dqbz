@@ -258,4 +258,14 @@ public class Service {
     public void setContext(String context) {
         this.context = context == null ? null : context.trim();
     }
+
+    public String getMemberName() {
+        return memberName;
+    }
+
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
+    }
+
+    private String memberName;
 }

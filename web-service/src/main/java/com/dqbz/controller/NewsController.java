@@ -1,8 +1,15 @@
 package com.dqbz.controller;
 
+import com.dqbz.model.Member;
+import com.dqbz.model.MemberWithBLOBs;
 import com.dqbz.model.News;
+import com.dqbz.service.MemberService;
 import com.dqbz.service.NewsService;
+
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,23 +37,27 @@ public class NewsController {
     @Autowired
     private NewsService newsService;
 
+    @Autowired
+    private MemberService memberService;
+
     @RequestMapping(value = "/newsList")
     public ModelAndView getNewsList(){
 
-        List<News> news = newsService.getAllNews();
+        List<News> news = newsService.getNewsByType("1");
         return new ModelAndView("newsList","newsList",news);
     }
 
     @RequestMapping(value = "/addNewsPage")
-    public String addNewsPage(){
-
-        return "addNews";
+    public ModelAndView addNewsPage(){
+        List<Member> memberList = memberService.selectAllMember();
+        return new ModelAndView("addNews","memberList",memberList);
     }
 
     @RequestMapping(value = "/updateNewsPage")
-    public String updateNewsPage(){
+    public ModelAndView updateNewsPage(){
 
-        return "updateNews";
+        List<Member> memberList = memberService.selectAllMember();
+        return new ModelAndView("updateNews","memberList",memberList);
     }
 
     @RequestMapping(value = "/addNews", method = POST)
@@ -69,12 +80,19 @@ public class NewsController {
         return jsonObject.toString();
     }
 
+
     @RequestMapping(value = "/getNewsByID")
     public @ResponseBody ModelAndView getNewsByID(HttpServletRequest request){
 
         String newsID = request.getParameter("newsID");
-
-        return new ModelAndView("updateNews","news",newsService.getNewsByID(Integer.parseInt(newsID)));
+        List<Member> memberList = memberService.selectAllMember();
+        News news = newsService.getNewsByID(Integer.parseInt(newsID));
+        Member member = memberService.getMember(news.getMemberid());
+        Map map = new HashMap();
+        map.put("memberList",memberList);
+        map.put("news",news);
+        map.put("member",member);
+        return new ModelAndView("updateNews","map",map);
     }
 
     @RequestMapping(value = "/deleteNewsByID", method = POST)
@@ -104,6 +122,7 @@ public class NewsController {
         news.setTitle(requestData.getString("title"));
         news.setMemberid(Integer.parseInt(requestData.getString("memberid")));
         news.setContent(requestData.getString("content"));
+        news.setUpdateTime(new Date());
 
         newsService.updateNews(news);
 

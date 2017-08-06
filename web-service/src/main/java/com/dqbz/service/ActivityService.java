@@ -8,15 +8,15 @@ import com.dqbz.model.Activity;
  */
 public interface ActivityService {
 
-	java.util.List<Activity> getAllNews();
+	java.util.List<Activity> getAllActivity();
 
-	int addNews(Activity activity);
+	int addActivity(Activity activity);
 
-	int updateNews(Activity activity);
+	int updateActivity(Activity activity);
 
-	Activity getNewsByID(int id);
+	Activity getActivityByID(int id);
 
-	int deleteNewsByID(int id);
+	int deleteActivityByID(int id);
 
-	Activity selectNewByID(int id);
+	Activity selectActivityByID(int id);
 }

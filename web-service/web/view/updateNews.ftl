@@ -4,22 +4,21 @@
 		<div style="margin-bottom: 70px">
 			<label>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作:</label>
 			<input type="button" class="form-control" style="margin-left: 10px" onclick="saveRecord()" value="保存">
-			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="updateIntroductionRecord()" id="updateRecord" value="修改">-->
-			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="addRecord()" id="deleteRecord" value="删除">-->
 		</div>
-            <input type="text" style="display: none" id="newsID" value=${news.id}>
+            <input type="text" style="display: none" id="newsID" value=${map.news.id}>
 		<div>
 			<label>新闻标题：</label>
-			<input type="text" id="title" class="form-control" style="width: 300px" value=${news.title}>
+			<input type="text" id="title" class="form-control" style="width: 300px" value=${map.news.title}>
 		</div>
 
         <div style="margin-top: 20px">
             <label>发布单位：</label>
-            <select id="memberID" class="form-control">
-                <option value="1">龙凤公墓</option>
-                <option value="2">天堂公墓</option>
-                <option value="3">寿山公墓</option>
-            </select>
+	        <select id="memberID" class="form-control">
+		        <option value='${map.member.id}' selected>${map.member.name}</option>
+		        <#list map.memberList as member>
+			        <option value='${member.id}'>${member.name}</option>
+		        </#list>
+	        </select>
         </div>
 
 		<div style="margin-top: 20px">
@@ -34,7 +33,7 @@
 <script type="text/javascript">
 
     ue.ready(function() {
-        ue.setContent('${news.content}');
+        ue.setContent('${map.news.content}');
     });
 
 	function saveRecord() {

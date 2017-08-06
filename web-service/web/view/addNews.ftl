@@ -4,8 +4,6 @@
 		<div style="margin-bottom: 70px">
 			<label>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作:</label>
 			<input type="button" class="form-control" style="margin-left: 10px" onclick="addNewsRecord()" value="保存">
-			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="updateIntroductionRecord()" id="updateRecord" value="修改">-->
-			<#--<input type="button" class="form-control" style="margin-left: 10px" onclick="addRecord()" id="deleteRecord" value="删除">-->
 		</div>
 
 		<div>
@@ -16,9 +14,9 @@
         <div style="margin-top: 20px">
             <label>发布单位：</label>
             <select id="memberID" class="form-control">
-                <option value="1">龙凤公墓</option>
-                <option value="2">天堂公墓</option>
-                <option value="3">寿山公墓</option>
+	            <#list memberList as member>
+                    <option value='${member.id}'>${member.name}</option>
+	            </#list>
             </select>
         </div>
 

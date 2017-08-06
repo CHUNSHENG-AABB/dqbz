@@ -61,5 +61,5 @@ public interface ArticleMapper {
      */
     int updateByPrimaryKey(Article record);
 
-    List<Article> getArticleByType(int typeID);
+    List<Article> getArticleByType(String type);
 }

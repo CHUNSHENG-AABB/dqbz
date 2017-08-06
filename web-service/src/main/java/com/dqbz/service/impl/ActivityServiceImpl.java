@@ -15,34 +15,34 @@ public class ActivityServiceImpl implements ActivityService {
     private ActivityMapper activityMapper;
 
     @Override
-    public List<Activity> getAllNews(){
+    public List<Activity> getAllActivity(){
         return activityMapper.selectAll();
     }
 
     @Override
-    public int addNews(Activity news){
+    public int addActivity(Activity Activity){
 
-        return activityMapper.insertSelective(news);
+        return activityMapper.insertSelective(Activity);
     }
 
     @Override
-    public int updateNews(Activity news){
-        return activityMapper.updateByPrimaryKeyWithBLOBs(news);
+    public int updateActivity(Activity Activity){
+        return activityMapper.updateByPrimaryKeyWithBLOBs(Activity);
     }
 
     @Override
-    public Activity getNewsByID(int id){
+    public Activity getActivityByID(int id){
         return activityMapper.selectByPrimaryKey(id);
     }
 
     @Override
-    public int deleteNewsByID(int id){
+    public int deleteActivityByID(int id){
 
         return activityMapper.deleteByPrimaryKey(id);
     }
 
     @Override
-    public Activity selectNewByID(int id){
+    public Activity selectActivityByID(int id){
 
         return activityMapper.selectByPrimaryKey(id);
     }

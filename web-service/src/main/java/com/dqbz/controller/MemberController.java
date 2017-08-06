@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -106,7 +107,7 @@ public class MemberController {
         member.setContent(requestData.getString("content"));
         member.setIntroduction(requestData.getString("memberIntro"));
         member.setContact(requestData.getString("contact"));
-
+        member.setUpdateTime(new Date());
         memberService.updateMember(member);
 
         JSONObject jsonObject = new JSONObject();

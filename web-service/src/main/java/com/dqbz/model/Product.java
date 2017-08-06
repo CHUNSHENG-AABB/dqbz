@@ -322,4 +322,14 @@ public class Product {
     public void setIntroduction(String introduction) {
         this.introduction = introduction == null ? null : introduction.trim();
     }
+
+    public String getMemberName() {
+        return memberName;
+    }
+
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
+    }
+
+    private String memberName;
 }

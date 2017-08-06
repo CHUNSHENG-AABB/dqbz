@@ -47,6 +47,22 @@
     from service
     where ID = #{id,jdbcType=INTEGER}
   </select>
+
+  <select id="selectAllService" resultMap="ResultMapWithBLOBs" >
+    SELECT
+    n.ID,
+    n.MEMBER_ID,
+    n. NAME,
+    n.INPUT_TIME,
+    n.INPUT_USER,
+    n.UPDATE_TIME,
+    n.UPDATE_USER,
+    m. NAME AS memberName
+    FROM
+    service n
+    LEFT JOIN member m ON n.MEMBER_ID = m.ID
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     <!--
       WARNING - @mbggenerated

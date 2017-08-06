@@ -4,7 +4,7 @@
 		<div style="margin-bottom: 70px">
 			<label>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作:</label>
 			<input type="button" class="form-control" style="margin-left: 10px" onclick="loadPage('addProductPage')" value="新增">
-			<input type="button" class="form-control" style="margin-left: 10px" onclick="updateNews()" value="修改">
+			<input type="button" class="form-control" style="margin-left: 10px" onclick="updateProduct()" value="修改">
 			<input type="button" class="form-control" style="margin-left: 10px" onclick="deleteProduct()" value="删除">
 		</div>
 
@@ -22,7 +22,7 @@
                     <input type="radio" name="radio" value=${product.id}></input>
                 </div>
                 <div class="col-md-3" style="border:1px solid black;font-size: 16px; text-align: center">${product.name}</div>
-                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${product.memberId}</div>
+                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${product.memberName}</div>
                 <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${product.inputTime?string("yyyy-MM-dd HH:mm:ss")}</div>
                 <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${product.updateTime?string("yyyy-MM-dd HH:mm:ss")}</div>
 			</div>
@@ -32,13 +32,13 @@
 </div>
 <script type="text/javascript">
 
-    function updateNews(){
+    function updateProduct(){
         var productID = $('input:radio:checked').val();
 		if(productID == null){
 			alert("请选择要修改的记录！");
 			$.abort();
 		}
-        loadPage('getMemberByID?productID='+productID);
+        loadPage('getProductByID?ProductID='+productID);
 	}
 
     function deleteProduct(){

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Date;
+
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
@@ -66,6 +68,7 @@ public class AssociationController {
 
         Association association = associationService.getAssociation(1);
         association.setContent(requestData.getString("content"));
+        association.setUpdateTime(new Date());
         associationService.saveAssociation(association);
 
         JSONObject jsonObject = new JSONObject();
@@ -82,6 +85,7 @@ public class AssociationController {
 
         Association association = associationService.getAssociation(2);
         association.setContent(requestData.getString("content"));
+        association.setUpdateTime(new Date());
         associationService.saveAssociation(association);
 
         JSONObject jsonObject = new JSONObject();

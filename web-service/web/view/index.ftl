@@ -296,13 +296,13 @@
                             <a href="#" onclick="loadPage('productList')">产品及价格管理</a>
                         </li>
                         <li>
-                            <a href="#" onclick="loadPage('')">服务及价格管理</a>
+                            <a href="#" onclick="loadPage('ServiceList')">服务管理</a>
                         </li>
                         <li>
                             <a href="#" onclick="loadPage('')">宣传展示管理</a>
                         </li>
                         <li>
-                            <a href="#" onclick="loadPage('')">通知公告管理</a>
+                            <a href="#" onclick="loadPage('messageList')">通知公告管理</a>
                         </li>
                         <li>
                             <a href="#" onclick="loadPage('')">网上祭祀管理</a>
@@ -316,68 +316,62 @@
                             <a href="#" onclick="loadPage('newsList')">历届会议</a>
                         </li>
                         <li>
-                            <a href="#" onclick="loadPage('')">活动资讯</a>
+                            <a href="#" onclick="loadPage('messageList')">活动资讯</a>
                         </li>
                     </ul>
                 </li>
 				<li>
-					<a href="ui-elements.html"><i class="fa fa-desktop"></i>1111</a>
-				</li>
-				<li>
-					<a href="chart.html"><i class="fa fa-bar-chart-o"></i> Charts</a>
-				</li>
-				<li>
-					<a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
-				</li>
-
-				<li>
-					<a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
-				</li>
-				<li>
-					<a href="form.html"><i class="fa fa-edit"></i> Forms </a>
-				</li>
-
-
-				<li>
-					<a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+					<a class="" href="#" ><i class="fa fa-bar-chart-o"></i> 活动管理<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li>
-							<a href="#">Second Level Link</a>
-						</li>
-						<li>
-							<a href="#">Second Level Link</a>
-						</li>
-						<li>
-							<a href="#">Second Level Link<span class="fa arrow"></span></a>
-							<ul class="nav nav-third-level">
-								<li>
-									<a href="#">Third Level Link</a>
-								</li>
-								<li>
-									<a href="#">Third Level Link</a>
-								</li>
-								<li>
-									<a href="#">Third Level Link</a>
-								</li>
-
-							</ul>
-
+							<a href="#" onclick="loadPage('ActivityList')">活动管理</a>
 						</li>
 					</ul>
 				</li>
+
 				<li>
-					<a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+					<a class="" href="#" ><i class="fa fa-qrcode"></i> 绿色殡葬<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li>
-							<a href="#">Second Level Link</a>
+							<a href="#" onclick="loadPage('../ArticleList?type=1')">文明祭祀</a>
 						</li>
 						<li>
-							<a href="#">Second Level Link</a>
+							<a href="#" onclick="loadPage('../ArticleList?type=2')">殡葬传统</a>
+						</li>
+						<li>
+							<a href="#" onclick="loadPage('../ArticleList?type=3')">文化常识</a>
 						</li>
 					</ul>
 				</li>
+
 				<li>
-					<a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
+					<a class="" href="#" ><i class="fa fa-table"></i> 行业管理<span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						<li>
+							<a href="#" onclick="loadPage('../ArticleList?type=4')">行业条例</a>
+						</li>
+						<li>
+							<a href="#" onclick="loadPage('../ArticleList?type=5')">行为规范</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a class="" href="#" ><i class="fa fa-edit"></i> 服务中心<span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						<li>
+							<a href="#" onclick="loadPage('../ArticleList?type=6')">从去世到安葬</a>
+						</li>
+						<li>
+							<a href="#" onclick="loadPage('../ArticleList?type=7')">基本丧葬费</a>
+						</li>
+						<li>
+							<a href="#" onclick="loadPage('../ArticleList?type=8')">选择性消费</a>
+						</li>
+						<li>
+							<a href="#" onclick="loadPage('../ArticleList?type=9')">指定服务点</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 

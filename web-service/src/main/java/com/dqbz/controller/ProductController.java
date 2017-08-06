@@ -1,6 +1,8 @@
 package com.dqbz.controller;
 
+import com.dqbz.model.Member;
 import com.dqbz.model.Product;
+import com.dqbz.service.MemberService;
 import com.dqbz.service.ProductService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -28,6 +33,9 @@ public class ProductController {
     @Autowired
     private ProductService ProductService;
 
+    @Autowired
+    private MemberService memberService;
+
     @RequestMapping(value = "/productList")
     public ModelAndView getProductList(){
 
@@ -36,9 +44,10 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/addProductPage")
-    public String addProductPage(){
+    public ModelAndView addProductPage(){
 
-        return "addProduct";
+        List<Member> memberList = memberService.selectAllMember();
+        return new ModelAndView("addProduct","memberList",memberList);
     }
 
     @RequestMapping(value = "/updateProductPage")
@@ -52,10 +61,14 @@ public class ProductController {
 
         JSONObject requestData = new JSONObject(data);
 
-        Product Product = new Product();
+        Product product = new Product();
+        product.setName(requestData.getString("productName"));
+        product.setCover(requestData.getString("cover"));
+        product.setIntroduction(requestData.getString("content"));
+        product.setPrice("price");
+        product.setMemberId(requestData.getInt("memberID"));
 
-
-        ProductService.addProduct(Product);
+        ProductService.addProduct(product);
 
         JSONObject jsonObject = new JSONObject();
 
@@ -68,8 +81,14 @@ public class ProductController {
     public @ResponseBody ModelAndView getProductByID(HttpServletRequest request){
 
         String ProductID = request.getParameter("ProductID");
-
-        return new ModelAndView("updateProduct","Product",ProductService.getProductByID(Integer.parseInt(ProductID)));
+        Product product = ProductService.getProductByID(Integer.parseInt(ProductID));
+        List<Member> memberList = memberService.selectAllMember();
+        Member member = memberService.getMember(product.getMemberId());
+        Map map = new HashMap();
+        map.put("member",member);
+        map.put("memberList",memberList);
+        map.put("product",product);
+        return new ModelAndView("updateProduct","map",map);
     }
 
     @RequestMapping(value = "/deleteProductByID", method = POST)
@@ -95,9 +114,15 @@ public class ProductController {
 
         int id = Integer.parseInt(requestData.getString("ProductID"));
 
-        Product Product = ProductService.selectProductByID(id);
+        Product product = ProductService.selectProductByID(id);
 
-        ProductService.updateProduct(Product);
+        product.setName(requestData.getString("productName"));
+        product.setCover(requestData.getString("cover"));
+        product.setIntroduction(requestData.getString("content"));
+        product.setPrice("price");
+        product.setMemberId(requestData.getInt("memberID"));
+        product.setUpdateTime(new Date());
+        ProductService.updateProduct(product);
 
         JSONObject jsonObject = new JSONObject();
 
