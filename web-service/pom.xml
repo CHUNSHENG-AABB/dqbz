@@ -20,5 +20,18 @@
 	</dependencies>
 	<build>
 		<finalName>web-service</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<!--指定web.xml文件的位置-->
+					<webXml>web\WEB-INF\web.xml</webXml>
+					<!--指定jsp等文件所在位置-->
+					<warSourceDirectory>web</warSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>

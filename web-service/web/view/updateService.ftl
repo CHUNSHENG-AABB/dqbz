@@ -9,7 +9,7 @@
         </div>
         <div class="form-group" style="margin-bottom: 20px">
             <label>服务名称：</label>
-            <input type="text" class="form-control" id="ServiceName" value=${map.service.name}>
+            <input type="text" class="form-control" id="ServiceName" value='${map.service.name}'>
         </div>
 
         <div style="margin-bottom: 20px">

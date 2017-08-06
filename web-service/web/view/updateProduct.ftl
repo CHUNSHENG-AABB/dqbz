@@ -9,13 +9,13 @@
         </div>
         <div class="form-group" style="margin-bottom: 20px">
             <label>产品名称：</label>
-            <input type="text" class="form-control" id="productName" value=${map.product.name}>
+            <input type="text" class="form-control" id="productName" value='${map.product.name}'>
         </div>
 
         <div style="margin-bottom: 20px">
             <label>所属单位：</label>
             <select id="memberID" class="form-control">
-                <option value=${map.member.id} selected>${map.member.name}</option>
+                <option value='${map.member.id}' selected>${map.member.name}</option>
                 <#list map.memberList as member>
                     <option value='${member.id}' >${member.name}</option>
                 </#list>
@@ -24,7 +24,7 @@
 
         <div style="margin-bottom: 20px">
             <label style="width: 70px">产品价格:</label>
-            <input type="text" class="form-control" id="price" value=${map.product.price}>
+            <input type="text" class="form-control" id="price" value='${map.product.price}'>
         </div>
 
         <div style="margin-bottom: 20px">

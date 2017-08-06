@@ -40,7 +40,7 @@ public class ServiceController {
     public ModelAndView getServiceList(){
 
         List<Service> ServiceList = ServiceService.getAllService();
-        return new ModelAndView("ServiceList","ServiceList",ServiceList);
+        return new ModelAndView("serviceList","ServiceList",ServiceList);
     }
 
     @RequestMapping(value = "/addServicePage")

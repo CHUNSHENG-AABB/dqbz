@@ -9,7 +9,7 @@
 		</div>
 		<div class="form-group" style="margin-top: 20px">
 			<label>活动名称：</label>
-			<input type="text" class="form-control" id="activityName" value=${map.activity.title}>
+			<input type="text" class="form-control" id="activityName" value='${map.activity.title}'>
 		</div>
 
 		<div style="margin-top: 20px">

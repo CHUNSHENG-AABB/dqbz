@@ -19,7 +19,7 @@
 		<#list ActivityList as Activity>
             <div class="container-fluid">
                 <div class="col-md-1" style="border:1px solid black;font-size: 16px; text-align: center">
-                    <input type="radio" name="radio" value=${Activity.id}></input>
+                    <input type="radio" name="radio" value='${Activity.id}'></input>
                 </div>
                 <div class="col-md-3" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.title}</div>
                 <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.name}</div>

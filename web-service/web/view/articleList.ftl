@@ -17,7 +17,7 @@
 		<#list entity.ArticleList as Article>
             <div class="container-fluid">
                 <div class="col-md-1" style="border:1px solid black;font-size: 16px; text-align: center">
-                    <input type="radio" name="radio" value=${Article.id}></input>
+                    <input type="radio" name="radio" value='${Article.id}'></input>
                 </div>
                 <div class="col-md-5" style="border:1px solid black;font-size: 16px; text-align: center">${Article.title}</div>
                 <div class="col-md-3" style="border:1px solid black;font-size: 16px; text-align: center">${Article.updateTime?string("yyyy-MM-dd HH:mm:ss")}</div>

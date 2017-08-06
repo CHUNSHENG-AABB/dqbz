@@ -9,7 +9,7 @@
         </div>
         <div class="form-group" style="margin-bottom: 20px">
             <label>会员名称：</label>
-            <input type="text" class="form-control" id="memberName" value=${member.name}>
+            <input type="text" class="form-control" id="memberName" value='${member.name}'>
         </div>
 
         <div style="margin-bottom: 20px">

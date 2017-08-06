@@ -18,7 +18,7 @@
 		<#list newsList as news>
             <div class="container-fluid">
                 <div class="col-md-1" style="border:1px solid black;font-size: 16px; text-align: center">
-                    <input type="radio" name="radio" value=${news.id}></input>
+                    <input type="radio" name="radio" value='${news.id}'></input>
                 </div>
                 <div class="col-md-5" style="border:1px solid black;font-size: 16px; text-align: center">${news.title}</div>
                 <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${news.name}</div>

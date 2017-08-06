@@ -18,7 +18,7 @@
 		<#list messageList as Message>
             <div class="container-fluid">
                 <div class="col-md-1" style="border:1px solid black;font-size: 16px; text-align: center">
-                    <input type="radio" name="radio" value=${Message.id}></input>
+                    <input type="radio" name="radio" value='${Message.id}'></input>
                 </div>
                 <div class="col-md-5" style="border:1px solid black;font-size: 16px; text-align: center">${Message.title}</div>
                 <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${Message.name}</div>

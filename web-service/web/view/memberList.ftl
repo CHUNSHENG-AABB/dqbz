@@ -17,7 +17,7 @@
 		<#list memberList as member>
             <div class="container-fluid">
                 <div class="col-md-1" style="border:1px solid black;font-size: 16px; text-align: center">
-                    <input type="radio" name="radio" value=${member.id}></input>
+                    <input type="radio" name="radio" value='${member.id}'></input>
                 </div>
                 <div class="col-md-5" style="border:1px solid black;font-size: 16px; text-align: center">${member.name}</div>
                 <div class="col-md-3" style="border:1px solid black;font-size: 16px; text-align: center">${member.updateTime?string("yyyy-MM-dd HH:mm:ss")}</div>

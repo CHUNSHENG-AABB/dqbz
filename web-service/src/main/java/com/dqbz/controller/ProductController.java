@@ -40,7 +40,7 @@ public class ProductController {
     public ModelAndView getProductList(){
 
         List<Product> ProductList = ProductService.getAllProduct();
-        return new ModelAndView("ProductList","ProductList",ProductList);
+        return new ModelAndView("productList","ProductList",ProductList);
     }
 
     @RequestMapping(value = "/addProductPage")

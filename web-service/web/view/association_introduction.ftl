@@ -9,7 +9,7 @@
 		</div>
 		<div class="form-group" style="margin-bottom: 20px">
 			<label>协会名称：</label>
-			<input type="text" class="form-control" value=${association_introduction.name} readonly="true">
+			<input type="text" class="form-control" value='${association_introduction.name}' readonly="true">
 		</div>
 
 		<div style="margin-bottom: 20px">

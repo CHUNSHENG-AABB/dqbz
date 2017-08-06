@@ -5,10 +5,10 @@
 			<label>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作:</label>
 			<input type="button" class="form-control" style="margin-left: 10px" onclick="saveRecord()" value="保存">
 		</div>
-            <input type="text" style="display: none" id="newsID" value=${map.news.id}>
+            <input type="text" style="display: none" id="newsID" value='${map.news.id}'>
 		<div>
 			<label>新闻标题：</label>
-			<input type="text" id="title" class="form-control" style="width: 300px" value=${map.news.title}>
+			<input type="text" id="title" class="form-control" style="width: 300px" value='${map.news.title}'>
 		</div>
 
         <div style="margin-top: 20px">
