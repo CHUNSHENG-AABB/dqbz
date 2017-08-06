@@ -70,7 +70,7 @@
 
 	function saveRecord() {
         var content = UE.getEditor('editor').getContent();
-        var json = JSON.stringify({"memberID":'${member.id}',"memberName":$("#memberName").val(),"cover":$("#cover_editor").val(),"content":ue.getContent(),"memberIntro":$("#memberName").val(),"memberIntro":$("#memberIntro").val(),"contact":text_ue.getContent()});
+        var json = JSON.stringify({"memberID":'${member.id}',"memberName":$("#memberName").val(),"cover":cover_ue.getContent(),"content":ue.getContent(),"memberIntro":$("#memberName").val(),"memberIntro":$("#memberIntro").val(),"contact":text_ue.getContent()});
         $.ajax({
             type: "post",
             contentType: "application/json;charset=utf-8",

@@ -237,7 +237,7 @@
 
 			<#list entity.members as member>
 
-				<div class="col-md-3 banner-bottom-grid-left" style="background:url(../images/lfgm.jpg) no-repeat 0px 0px;padding-left:0px;margin-top: 1em;">
+				<div class="col-md-3 banner-bottom-grid-left" style="background:url(../images/gz.jpg) no-repeat 0px 0px;padding-left:0px;margin-top: 1em;">
 					<div class="br-bm-gd-lt" style="width: 255px;">
 						<div class="overlay">
 							<div class="arrow-left"></div>
