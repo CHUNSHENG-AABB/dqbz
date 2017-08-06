@@ -44,7 +44,7 @@
 
     var cover_ue = UE.getEditor('cover_editor',{
         toolbars: [
-            ['simpleupload','cleardoc']
+            ['simpleupload','cleardoc','justifyleft', 'justifyright', 'justifycenter', 'justifyjustify']
         ],
         autoFloatEnabled: false,
 		zIndex:0
@@ -57,12 +57,8 @@
 	    autoFloatEnabled: false,
 	    zIndex:0
     });
-
-	ue.ready(function() {
-		ue.setContent('');
-	});
-
 	function saveRecord(){
+		var content = UE.getEditor('editor').getContent();
 		var json = JSON.stringify({"memberName":$("#memberName").val(),"cover":cover_ue.getContent(),"content":ue.getContent(),"memberIntro":$("#memberName").val(),"memberIntro":$("#memberIntro").val(),"contact":text_ue.getContent()});
 		$.ajax({
 			type:"post",

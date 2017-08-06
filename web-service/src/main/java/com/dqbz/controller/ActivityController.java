@@ -87,10 +87,13 @@ public class ActivityController {
     public @ResponseBody ModelAndView getActivityByID(HttpServletRequest request){
 
         String ActivityID = request.getParameter("ActivityID");
+        Activity activity = ActivityService.getActivityByID(Integer.parseInt(ActivityID));
         List<Member> memberList = memberService.selectAllMember();
+        Member member = memberService.getMember(activity.getMemberid());
         Map map = new HashMap();
         map.put("memberList",memberList);
-        map.put("activity",ActivityService.getActivityByID(Integer.parseInt(ActivityID)));
+        map.put("member",member);
+        map.put("activity",activity);
         return new ModelAndView("updateActivity","map",map);
     }
 

@@ -54,7 +54,7 @@
 
 	var cover_ue = UE.getEditor('cover_editor',{
         toolbars: [
-            ['simpleupload','cleardoc']
+            ['simpleupload','cleardoc','justifyleft', 'justifyright', 'justifycenter', 'justifyjustify']
         ],
         autoFloatEnabled: false,
 		zIndex:0

@@ -65,7 +65,7 @@ public class ProductController {
         product.setName(requestData.getString("productName"));
         product.setCover(requestData.getString("cover"));
         product.setIntroduction(requestData.getString("content"));
-        product.setPrice("price");
+        product.setPrice(requestData.getString("price"));
         product.setMemberId(requestData.getInt("memberID"));
 
         ProductService.addProduct(product);
@@ -119,7 +119,7 @@ public class ProductController {
         product.setName(requestData.getString("productName"));
         product.setCover(requestData.getString("cover"));
         product.setIntroduction(requestData.getString("content"));
-        product.setPrice("price");
+        product.setPrice(requestData.getString("price"));
         product.setMemberId(requestData.getInt("memberID"));
         product.setUpdateTime(new Date());
         ProductService.updateProduct(product);

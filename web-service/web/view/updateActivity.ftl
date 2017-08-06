@@ -15,6 +15,7 @@
 		<div style="margin-top: 20px">
 			<label>发布单位：</label>
 			<select id="memberID" class="form-control">
+				<option value='${map.member.id}'>${map.member.name}</option>
 				<#list map.memberList as member>
 					<option value='${member.id}'>${member.name}</option>
 				</#list>
@@ -56,7 +57,7 @@
 
 	var cover_ue = UE.getEditor('cover_editor',{
         toolbars: [
-            ['simpleupload','cleardoc']
+            ['simpleupload','cleardoc','justifyleft', 'justifyright', 'justifycenter', 'justifyjustify']
         ],
         autoFloatEnabled: false,
 		zIndex:0

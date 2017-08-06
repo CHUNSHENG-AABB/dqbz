@@ -17,7 +17,6 @@
     <!-- js -->
     <script src="../js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript">
         function loadPage(pageLink) {
@@ -48,7 +47,7 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="/memberDetail?id=${entity.member.id}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>简介</a>
+				                    <a href="/memberDetail?id=${entity.member.id}&page=home"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>简介</a>
 			                    </h4>
 		                    </div>
 	                    </div>
