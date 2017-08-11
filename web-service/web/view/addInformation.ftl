@@ -7,12 +7,12 @@
 		</div>
 
 		<div>
-			<label>新闻标题：</label>
+			<label>资讯标题：</label>
 			<input type="text" id="title" class="form-control" style="width: 300px">
 		</div>
 
 		<div style="margin-top: 20px">
-			<label>新闻内容：</label>
+			<label>资讯内容：</label>
 		</div>
 		<div>
 			<#include "editor.ftl"/>
@@ -29,7 +29,7 @@
 		var title = $("#title").val();
 		var member = $("#memberID").val();
 		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"title":title,"memberid":'0',"content":content, "type":'1'});
+		var json = JSON.stringify({"title":title,"memberid":'0',"content":content,"type":'3'});
 		$.ajax({
             type:"post",
             contentType: "application/json;charset=utf-8",
@@ -48,7 +48,7 @@
             },
         	success: function (result) {
             	alert(result['key']);
-                loadPage('newsList');
+                loadPage('informationList');
         	},
         	error: function (result) {
 				alert(result);

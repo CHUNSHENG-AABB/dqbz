@@ -13,26 +13,6 @@
 		</div>
 
 		<div style="margin-top: 20px">
-			<label>发布单位：</label>
-			<select id="memberID" class="form-control">
-				<option value='${map.member.id}'>${map.member.name}</option>
-				<#list map.memberList as member>
-					<option value='${member.id}'>${member.name}</option>
-				</#list>
-			</select>
-		</div>
-
-		<div style="margin-top: 20px">
-			<label style="width: 70px">开始时间:</label>
-			<input type="datetime-local" class="form-control" id="startTime">
-			<input type="text" style="display: none" id="startTime_hid" value='${map.activity.beginTime?string("yyyy-MM-dd HH:mm")}'>
-			<label style="width: 70px">结束时间:</label>
-			<input type="datetime-local" class="form-control" id="endTime">
-			<input type="text" style="display: none" id="endTime_hid" value='${map.activity.endTime?string("yyyy-MM-dd HH:mm")}'>
-
-		</div>
-
-		<div style="margin-top: 20px">
 			<label>活动简介:</label>
 			<div>
 				<textarea id="Intro" class="form-control" style="width: 64%; height: 100px">${map.activity.introduction}</textarea>
@@ -67,14 +47,14 @@
 		ue.setContent('${map.activity.content}');
 
 
-		var startTime= $("#startTime_hid").val();
-		var endTime= $("#endTime_hid").val();
-		startTime = startTime.replace(" ","T");
-		endTime = endTime.replace(" ","T");
+//		var startTime= $("#startTime_hid").val();
+//		var endTime= $("#endTime_hid").val();
+//		startTime = startTime.replace(" ","T");
+//		endTime = endTime.replace(" ","T");
 //		startTime.substr(0,16);
 //		endTime.substr(0,16);
-		$("#startTime").val(startTime);
-		$("#endTime").val(endTime);
+//		$("#startTime").val(startTime);
+//		$("#endTime").val(endTime);
 
 	});
 	cover_ue.ready(function() {
@@ -83,7 +63,7 @@
 
 	function saveRecord(){
 		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"ActivityID":'${map.activity.id}',"activityName":$("#activityName").val(),"cover":cover_ue.getContent(),"content":ue.getContent(),"memberID":$("#memberID").val(),"startTime":$("#startTime").val(),"endTime":$("#endTime").val(),"intro":$('#Intro').val()});
+		var json = JSON.stringify({"ActivityID":'${map.activity.id}',"activityName":$("#activityName").val(),"cover":cover_ue.getContent(),"content":ue.getContent(),"memberID":'0',"startTime":'',"endTime":'',"intro":$('#Intro').val()});
 		$.ajax({
 			type:"post",
 			contentType: "application/json;charset=utf-8",

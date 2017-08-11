@@ -47,10 +47,23 @@ public class NewsController {
         return new ModelAndView("newsList","newsList",news);
     }
 
+    @RequestMapping(value = "/informationList")
+    public ModelAndView getInformationList(){
+
+        List<News> news = newsService.getNewsByType("3");
+        return new ModelAndView("informationList","newsList",news);
+    }
+
     @RequestMapping(value = "/addNewsPage")
     public ModelAndView addNewsPage(){
         List<Member> memberList = memberService.selectAllMember();
         return new ModelAndView("addNews","memberList",memberList);
+    }
+
+    @RequestMapping(value = "/addInformation")
+    public ModelAndView addInformation(){
+        List<Member> memberList = memberService.selectAllMember();
+        return new ModelAndView("addInformation","memberList",memberList);
     }
 
     @RequestMapping(value = "/updateNewsPage")
@@ -67,7 +80,7 @@ public class NewsController {
 
         News news = new News();
         news.setTitle(requestData.getString("title"));
-        news.setType("1");
+        news.setType(requestData.getString("type"));
         news.setMemberid(Integer.parseInt(requestData.getString("memberid")));
         news.setContent(requestData.getString("content"));
 
@@ -93,6 +106,20 @@ public class NewsController {
         map.put("news",news);
         map.put("member",member);
         return new ModelAndView("updateNews","map",map);
+    }
+
+    @RequestMapping(value = "/getInformationByID")
+    public @ResponseBody ModelAndView getInformationByID(HttpServletRequest request){
+
+        String newsID = request.getParameter("newsID");
+        List<Member> memberList = memberService.selectAllMember();
+        News news = newsService.getNewsByID(Integer.parseInt(newsID));
+        Member member = memberService.getMember(news.getMemberid());
+        Map map = new HashMap();
+        map.put("memberList",memberList);
+        map.put("news",news);
+        map.put("member",member);
+        return new ModelAndView("updateInformation","map",map);
     }
 
     @RequestMapping(value = "/deleteNewsByID", method = POST)

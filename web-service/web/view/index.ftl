@@ -315,15 +315,15 @@
                             <a href="#" onclick="loadPage('newsList')">历届会议</a>
                         </li>
                         <li>
-                            <a href="#" onclick="loadPage('messageList')">活动资讯</a>
+                            <a href="#" onclick="loadPage('informationList')">活动资讯</a>
                         </li>
                     </ul>
                 </li>
 				<li>
-					<a class="" href="#" ><i class="fa fa-bar-chart-o"></i> 活动管理<span class="fa arrow"></span></a>
+					<a class="" href="#" ><i class="fa fa-bar-chart-o"></i>最新动态<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li>
-							<a href="#" onclick="loadPage('ActivityList')">活动管理</a>
+							<a href="#" onclick="loadPage('ActivityList')">最新动态</a>
 						</li>
 					</ul>
 				</li>
@@ -344,7 +344,7 @@
 				</li>
 
 				<li>
-					<a class="" href="#" ><i class="fa fa-table"></i> 行业管理<span class="fa arrow"></span></a>
+					<a class="" href="#" ><i class="fa fa-table"></i>行业管理<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li>
 							<a href="#" onclick="loadPage('../ArticleList?type=4')">行业条例</a>
@@ -368,7 +368,10 @@
 							<a href="#" onclick="loadPage('../ArticleList?type=8')">选择性消费</a>
 						</li>
 						<li>
-							<a href="#" onclick="loadPage('../ArticleList?type=9')">指定服务点</a>
+							<a href="#" onclick="loadPage('#')">推荐殡葬用品销售点</a>
+						</li>
+						<li>
+							<a href="#" onclick="loadPage('#')">推荐先生</a>
 						</li>
 					</ul>
 				</li>

@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
 	<!-- !!!! Driver Class Path !!!! -->
-	<classPathEntry location="E:\mvn\repository\mysql\mysql-connector-java\5.1.29\mysql-connector-java-5.1.29.jar"/>
+	<classPathEntry location="G:\work\maven\repository\mysql\mysql-connector-java\5.1.29\mysql-connector-java-5.1.29.jar"/>
 
 	<context id="context" targetRuntime="MyBatis3">
 		<commentGenerator>
@@ -37,7 +37,7 @@
 		</javaClientGenerator>
 
 		<!-- !!!! Table Configurations !!!! -->
-		<table tableName="product" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+		<table tableName="sir" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
 		       enableUpdateByExample="false"/>
 	</context>
 </generatorConfiguration>

@@ -11,23 +11,13 @@
 			<label>活动名称：</label>
 			<input type="text" class="form-control" id="activityName" value="">
 		</div>
+		<!--<div style="margin-bottom: 20px">-->
+			<!--<label style="width: 70px">开始时间:</label>-->
+			<!--<input type="datetime-local" class="form-control" id="startTime" value="">-->
 
-		<div style="margin-bottom: 20px">
-			<label>所属单位：</label>
-			<select id="memberID" class="form-control">
-				<#list memberList as member>
-					<option value='${member.id}'>${member.name}</option>
-				</#list>
-			</select>
-		</div>
-
-		<div style="margin-bottom: 20px">
-			<label style="width: 70px">开始时间:</label>
-			<input type="datetime-local" class="form-control" id="startTime" value="">
-
-			<label style="width: 70px">结束时间:</label>
-			<input type="datetime-local" class="form-control" id="endTime" value="">
-		</div>
+			<!--<label style="width: 70px">结束时间:</label>-->
+			<!--<input type="datetime-local" class="form-control" id="endTime" value="">-->
+		<!--</div>-->
 
 		<div style="margin-bottom: 20px">
 			<label>活动简介:</label>
@@ -62,7 +52,7 @@
 
 	function saveRecord(){
 		var content = UE.getEditor('editor').getContent();
-		var json = JSON.stringify({"activityName":$("#activityName").val(),"cover":cover_ue.getContent(),"content":ue.getContent(),"memberID":$("#memberID").val(),"startTime":$("#startTime").val(),"endTime":$("#endTime").val(),"intro":$('#Intro').val()});
+		var json = JSON.stringify({"activityName":$("#activityName").val(),"cover":cover_ue.getContent(),"content":ue.getContent(),"memberID":'0',"startTime":'',"endTime":'',"intro":$('#Intro').val()});
 		$.ajax({
 			type:"post",
 			contentType: "application/json;charset=utf-8",

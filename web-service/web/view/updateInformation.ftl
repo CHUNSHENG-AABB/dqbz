@@ -7,12 +7,12 @@
 		</div>
             <input type="text" style="display: none" id="newsID" value='${map.news.id}'>
 		<div>
-			<label>新闻标题：</label>
+			<label>资讯标题：</label>
 			<input type="text" id="title" class="form-control" style="width: 300px" value='${map.news.title}'>
 		</div>
 
 		<div style="margin-top: 20px">
-			<label>新闻内容：</label>
+			<label>资讯内容：</label>
 		</div>
 		<div>
 			<#include "editor.ftl"/>
@@ -46,7 +46,7 @@
             },
             success: function (result) {
                 alert(result['key']);
-                loadPage('newsList');
+                loadPage('informationList');
             },
             error: function (result) {
                 alert(result);

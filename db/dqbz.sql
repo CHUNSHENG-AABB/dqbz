@@ -173,3 +173,40 @@ CREATE TABLE `service` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='产品服务';
 SET FOREIGN_KEY_CHECKS=1;
+
+
+
+-- ----------------------------
+-- Table structure for sir
+-- ----------------------------
+DROP TABLE IF EXISTS `sir`;
+CREATE TABLE `sir` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(50) DEFAULT '' COMMENT '名称',
+  `TYPE` varchar(50) DEFAULT '' COMMENT '会员类型（1、团伙 2、先生）',
+  `INTRODUCTION` varchar(140) DEFAULT NULL COMMENT '简介',
+  `CONTENT` longtext COMMENT '详细介绍',
+  `INPUT_TIME` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `INPUT_USER` varchar(50) DEFAULT '' COMMENT '创建人',
+  `UPDATE_TIME` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `UPDATE_USER` varchar(50) DEFAULT '' COMMENT '更新人',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='先生和小姐';
+
+-- ----------------------------
+-- Table structure for sweep
+-- ----------------------------
+DROP TABLE IF EXISTS `sweep`;
+CREATE TABLE `sweep` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `MEMBERID` int(11) NOT NULL COMMENT '会员ID',
+  `cusName` varchar(140) DEFAULT NULL COMMENT '姓名',
+  `phone` varchar(140) DEFAULT NULL COMMENT '电话',
+  `serName` varchar(140) DEFAULT NULL COMMENT '服务名称',
+  `INPUT_TIME` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `INPUT_USER` varchar(50) DEFAULT '' COMMENT '创建人',
+  `UPDATE_TIME` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `UPDATE_USER` varchar(50) DEFAULT '' COMMENT '更新人',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='代客祭扫';
+SET FOREIGN_KEY_CHECKS=1;

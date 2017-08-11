@@ -69,11 +69,11 @@ public class ActivityController {
         Activity.setContent(requestData.getString("content"));
         Activity.setIntroduction(requestData.getString("intro"));
         Activity.setMemberid(requestData.getInt("memberID"));
-        String startTime = requestData.getString("startTime").replace("T"," ") + ":00";
-        String endTime = requestData.getString("endTime").replace("T"," ") + ":00";
-        SimpleDateFormat format = (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
-        Activity.setBeginTime(format.parse(startTime));
-        Activity.setEndTime(format.parse(endTime));
+//        String startTime = requestData.getString("startTime").replace("T"," ") + ":00";
+//        String endTime = requestData.getString("endTime").replace("T"," ") + ":00";
+//        SimpleDateFormat format = (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+//        Activity.setBeginTime(format.parse(startTime));
+//        Activity.setEndTime(format.parse(endTime));
         ActivityService.addActivity(Activity);
 
         JSONObject jsonObject = new JSONObject();
@@ -127,11 +127,11 @@ public class ActivityController {
         Activity.setContent(requestData.getString("content"));
         Activity.setIntroduction(requestData.getString("intro"));
         Activity.setMemberid(requestData.getInt("memberID"));
-        String startTime = requestData.getString("startTime").replace("T"," ") + ":00";
-        String endTime = requestData.getString("endTime").replace("T"," ") + ":00";
-        SimpleDateFormat format = (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
-        Activity.setBeginTime(format.parse(startTime));
-        Activity.setEndTime(format.parse(endTime));
+//        String startTime = requestData.getString("startTime").replace("T"," ") + ":00";
+//        String endTime = requestData.getString("endTime").replace("T"," ") + ":00";
+//        SimpleDateFormat format = (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+//        Activity.setBeginTime(format.parse(startTime));
+//        Activity.setEndTime(format.parse(endTime));
         Activity.setUpdateTime(new Date());
         ActivityService.updateActivity(Activity);
 

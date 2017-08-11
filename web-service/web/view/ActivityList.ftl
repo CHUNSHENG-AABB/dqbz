@@ -10,8 +10,7 @@
 
 		<div class="container-fluid">
             <div class="col-md-1" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">选择</div>
-            <div class="col-md-3" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">产品名称</div>
-            <div class="col-md-2" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">发布单位</div>
+            <div class="col-md-5" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">动态标题</div>
             <div class="col-md-2" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">开始时间</div>
             <div class="col-md-2" style="background-color: #00a0e9; border:1px solid black;font-size: 16px; text-align: center">结束时间</div>
 		</div>
@@ -21,10 +20,9 @@
                 <div class="col-md-1" style="border:1px solid black;font-size: 16px; text-align: center">
                     <input type="radio" name="radio" value='${Activity.id}'></input>
                 </div>
-                <div class="col-md-3" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.title}</div>
-                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.name}</div>
-                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.beginTime?string("yyyy-MM-dd HH:mm")}</div>
-                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.endTime?string("yyyy-MM-dd HH:mm")}</div>
+                <div class="col-md-5" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.title}</div>
+                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.inputTime?string("yyyy-MM-dd HH:mm")}</div>
+                <div class="col-md-2" style="border:1px solid black;font-size: 16px; text-align: center">${Activity.updateTime?string("yyyy-MM-dd HH:mm")}</div>
 			</div>
 		</#list>
 
