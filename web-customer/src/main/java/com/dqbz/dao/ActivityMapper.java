@@ -68,4 +68,5 @@ public interface ActivityMapper {
     List<Activity> selectAllByTime(Date now);
 
     List<Activity> selectAllByTimeOver(Date now);
+
 }

@@ -9,14 +9,17 @@
 	}, false);
 	function hideURLbar() {
 		window.scrollTo(0, 1);
-	} </script>
+	}
+	</script>
 	<!-- Custom Theme files -->
 	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	<!-- js -->
 	<script src="../js/jquery-1.11.1.min.js"></script>
 	<!-- //js -->
-
+	<link href="../css/video-js.css" rel="stylesheet">
+	<!-- If you'd like to support IE8 -->
+	<script src="../js/video.min.js"></script>
 
 </head>
 
@@ -97,16 +100,22 @@
                     <h3>视频资料</h3>
                     <a href="#" style="font-size: 1em">更多</a>
                 </div>
-				<video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls" id="mainVideo" style="width: 100%;"></video>
+	            <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" width="730" height="547.5"
+	                   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+		            <source src="../video/home.webm" type="video/mp4">
+		            <p class="vjs-no-js">
+			            To view this video please enable JavaScript, and consider upgrading to a web browser that
+			            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+		            </p>
+	            </video>
 			</div>
 			<div class="col-md-4 video-grids-right">
 				<div class="sap_tabs">
 					<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 						<ul class="resp-tabs-list">
-							<li class="resp-tab-item grid1" aria-controls="tab_item-0" role="tab"><span>进行中活动</span>
+							<li class="resp-tab-item grid1" aria-controls="tab_item-0" role="tab" style="width: 100%;"><span>最新动态</span>
 							</li>
-							<li class="resp-tab-item grid2" aria-controls="tab_item-1" role="tab"><span>已结束活动</span>
-							</li>
+
 							<div class="clear"></div>
 						</ul>
 
@@ -123,32 +132,14 @@
                                         <div class="tab_list1">
                                             <ul>
                                                 <li><a href="/activityDetail?id=${activities_doing.id}">${activities_doing.title}</a> <label></label></li>
-                                                <li>开始时间：${activities_doing.beginTime?string('yyyy-MM-dd')}</li>
-                                                <li>结束时间：${activities_doing.endTime?string('yyyy-MM-dd')}</li>
+                                                <!--<li>开始时间：${activities_doing.beginTime?string('yyyy-MM-dd')}</li>-->
+                                                <!--<li>结束时间：${activities_doing.endTime?string('yyyy-MM-dd')}</li>-->
                                             </ul>
                                             <p><a href="#">${activities_doing.introduction}</a></p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
 								</#list>
-							</div>
-							<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-							<#list entity.activities_ended as activities_ended>
-                                <div class="facts">
-                                    <div class="tab_list">
-										${activities_ended.cover}
-                                    </div>
-                                    <div class="tab_list1">
-                                        <ul>
-                                            <li><a href="/activityDetail?id=${activities_ended.id}">${activities_ended.title}</a> <label></label></li>
-                                            <li>开始时间：${activities_ended.beginTime?string('yyyy-MM-dd')}</li>
-                                            <li>结束时间：${activities_ended.endTime?string('yyyy-MM-dd')}</li>
-                                        </ul>
-                                        <p><a href="#">${activities_ended.introduction}</a></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-							</#list>
 							</div>
 						</div>
 						<script src="../js/easyResponsiveTabs.js" type="text/javascript"></script>
@@ -195,7 +186,7 @@
 						<ul class="nav nav-tabs" role="tablist">
 							<li role="presentation" class="active" style="width: 350px"><a class="high" href="#home"
 							                                                               aria-controls="home"
-							                                                               role="tab" data-toggle="tab">网上祭祀</a>
+							                                                               role="tab" data-toggle="tab">代客祭扫</a>
 							</li>
 							<!--<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">edit location</a></li>-->
 						</ul>
@@ -206,19 +197,20 @@
 						<p>请填写信息</p>
 						<form>
 							<select>
-								<option value="1">龙凤公墓</option>
-								<option value="2">其他公墓</option>
-							</select>
-							<select>
-								<option value="1">献花</option>
-								<option value="2">上香</option>
-								<option value="3">送灯</option>
+								<option value="1">大庆市殡仪馆</option>
+								<option value="2">天园殡仪馆</option>
+								<option value="3">大庆市净园公墓</option>
+								<option value="4">寿山公墓</option>
+								<option value="5">大庆市龙凤公墓</option>
+								<option value="6">天堂墓园</option>
+								<option value="7">松鹤墓园</option>
+								<option value="8">净山公墓</option>
 							</select>
 							<input type="text" value="请填写姓名" onfocus="this.value = '';"
 							       onblur="if (this.value == '') {this.value = '请填写姓名';}">
 							<input type="text" value="请填写联系方式" onfocus="this.value = '';"
 							       onblur="if (this.value == '') {this.value = '请填写联系方式';}">
-							<input type="submit" style="float: right;margin-right:30px;" value="提交">
+							<input type="submit" style="float: right;margin-right:30%;" value="提交" onclick="alert('提交成功')">
 						</form>
 					</div>
 
@@ -287,6 +279,12 @@
 <!-- for bootstrap working -->
 <script src="../js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
-
+<script type="text/javascript">
+	var myPlayer = videojs('my-video');
+	videojs("my-video").ready(function(){
+		var myPlayer = this;
+//		myPlayer.play();
+	});
+</script>
 </body>
 </html>

@@ -35,14 +35,11 @@ public class IndexController {
 	@RequestMapping(value = "/")
 	public ModelAndView index() {
 
-		List<Activity> activities_doing = activityService.getDoingActivity(new Date());
-		List<Activity> activities_ended = activityService.getEndedActivity(new Date());
+		List<Activity> activities_doing = activityService.getAllActivity();
 		while (activities_doing.size()>4){
 			activities_doing.remove(activities_doing.size()-1);
 		}
-		while (activities_ended.size()>4){
-			activities_ended.remove(activities_ended.size()-1);
-		}
+
 
 		List<News> news = newsService.getNewsSixRecord();
 
@@ -50,7 +47,6 @@ public class IndexController {
 
 		Map map = new HashMap();
 		map.put("activities_doing", activities_doing);
-		map.put("activities_ended", activities_ended);
 		map.put("news",news);
 		map.put("members",members);
 		return new ModelAndView("index", "entity", map);

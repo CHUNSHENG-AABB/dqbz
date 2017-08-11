@@ -39,17 +39,10 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/doingActivity');" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>进行中活动</a>
+				                    <a href="#" onclick="loadPage('/doingActivity');" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>最新动态</a>
 			                    </h4>
 		                    </div>
                         </div>
-	                    <div class="panel panel-default">
-		                    <div class="panel-heading" role="tab" id="headingTwo">
-			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/endedActivity');" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>已结束活动</a>
-			                    </h4>
-		                    </div>
-	                    </div>
                     </div>
                 </div>
             </div>

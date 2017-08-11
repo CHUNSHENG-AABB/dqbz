@@ -304,7 +304,7 @@
                             <a href="#" onclick="loadPage('messageList')">通知公告管理</a>
                         </li>
                         <li>
-                            <a href="#" onclick="loadPage('')">网上祭祀管理</a>
+                            <a href="#" onclick="loadPage('')">代客祭扫管理</a>
                         </li>
                     </ul>
                 </li>

@@ -89,7 +89,7 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="collapseFour">
 			                    <h4 class="panel-title">
-				                    <a href="#" onclick="loadPage('/fete')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>网上祭祀</a>
+				                    <a href="#" onclick="loadPage('/fete')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>代客祭扫</a>
 			                    </h4>
 		                    </div>
 	                    </div>

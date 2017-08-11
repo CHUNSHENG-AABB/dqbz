@@ -17,6 +17,13 @@
     <!-- js -->
     <script src="../js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
+
+	<script type="text/javascript">
+		function loadPage(pageLink) {
+			$("#content").html(null);
+			$("#content").load(pageLink);
+		}
+	</script>
 </head>
 
 <body>
@@ -53,7 +60,14 @@
 	                    <div class="panel panel-default">
 		                    <div class="panel-heading" role="tab" id="headingTwo">
 			                    <h4 class="panel-title">
-				                    <a href="../members"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>组织机构</a>
+				                    <a href="#" onclick="loadPage('organization')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>组织机构</a>
+			                    </h4>
+		                    </div>
+	                    </div>
+	                    <div class="panel panel-default">
+		                    <div class="panel-heading" role="tab" id="headingTwo">
+			                    <h4 class="panel-title">
+				                    <a href="#" onclick="loadPage('overview')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>协会概况</a>
 			                    </h4>
 		                    </div>
 	                    </div>
@@ -62,7 +76,7 @@
             </div>
 
 
-            <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background-color: #f9f9f9">
+            <div class="col-md-8 news-grid-left" style="width: 75%; padding-right: 0px; background:transparent" id="content">
                 <h3>协会简介</h3>
                 <div>
                     ${association.content}

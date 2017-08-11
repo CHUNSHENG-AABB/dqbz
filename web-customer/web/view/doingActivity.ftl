@@ -1,4 +1,4 @@
-<h3>进行中活动</h3>
+<h3>最新动态</h3>
 <ul>
     <#list activities as activity>
     <li>

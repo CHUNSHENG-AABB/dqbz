@@ -33,4 +33,9 @@ public class ActivityServiceImpl implements ActivityService {
 	public Activity getActivityById(Integer id) {
 		return activityMapper.selectByPrimaryKey(id);
 	}
+
+	@Override
+	public List<Activity> getAllActivity() {
+		return activityMapper.selectAll();
+	}
 }

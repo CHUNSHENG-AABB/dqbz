@@ -15,4 +15,6 @@ public interface ActivityService {
 	List<Activity> getEndedActivity(Date now);
 
 	Activity getActivityById(Integer id);
+
+	List<Activity> getAllActivity();
 }

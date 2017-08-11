@@ -107,6 +107,16 @@ public class HomeController {
         return "fete";
     }
 
+    @RequestMapping(value = "/organization")
+    public String organization() {
+        return "organization";
+    }
+
+    @RequestMapping(value = "/overview")
+    public String overview() {
+        return "overview";
+    }
+
 
     /**
      * 产品介绍及价格
@@ -154,7 +164,7 @@ public class HomeController {
     @RequestMapping(value = "/doingActivity")
     public ModelAndView doingActivity(){
 
-        List<Activity> activities = activityService.getDoingActivity(new Date());
+        List<Activity> activities = activityService.getAllActivity();
         return new ModelAndView("doingActivity", "activities", activities);
 
     }
