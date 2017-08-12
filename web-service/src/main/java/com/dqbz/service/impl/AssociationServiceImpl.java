@@ -6,6 +6,8 @@ import com.dqbz.service.AssociationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author Gao Zhengyuan
  * @create 2017-07-23-16:08
@@ -27,6 +29,11 @@ public class AssociationServiceImpl implements AssociationService {
 	public Integer saveAssociation(Association association) {
 
 		return associationMapper.updateByPrimaryKeyWithBLOBs(association);
+	}
+
+	@Override
+	public List<Association> getAssociationByType(String type){
+		return associationMapper.getAssociationByType(type);
 	}
 
 

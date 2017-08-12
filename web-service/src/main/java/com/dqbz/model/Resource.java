@@ -322,4 +322,14 @@ public class Resource {
     public void setIntroduction(String introduction) {
         this.introduction = introduction == null ? null : introduction.trim();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
 }

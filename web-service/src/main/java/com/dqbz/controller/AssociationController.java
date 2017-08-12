@@ -7,10 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -30,43 +34,44 @@ public class AssociationController {
         return "index";
     }
 
-    @RequestMapping(value = "/association_introduction")
-    public ModelAndView association_introduction(){
-
-        Association association = associationService.getAssociation(1);
-        return new ModelAndView("association_introduction","association_introduction",association);
+    @RequestMapping(value = "/video")
+    public String video(){
+        return "video";
     }
 
-    @RequestMapping(value = "/association_constitution")
-    public ModelAndView association_constitution(){
+    @RequestMapping(value = "/associationList")
+    public ModelAndView associationList(@RequestParam("type")String type){
 
-        Association association = associationService.getAssociation(2);
-        return new ModelAndView("association_constitution","association_constitution",association);
+        List<Association> associationList = associationService.getAssociationByType(type);
+        String typeName = "";
+        Map map = new HashMap();
+        map.put("associationList",associationList);
+
+        if (type.equals("1")){
+            typeName = "协会简介";
+        }
+        if (type.equals("2")){
+            typeName = "协会章程";
+        }
+        if (type.equals("3")){
+            typeName = "协会概况";
+        }
+        if (type.equals("4")){
+            typeName = "协会机构";
+        }
+        map.put("type",type);
+        map.put("typeName",typeName);
+
+        return new ModelAndView("associationList","map",map);
     }
 
-    @RequestMapping(value = "/ueditor")
-    public String ueditor(){
-        return "editor";
-    }
 
-    @RequestMapping(value = "/cover_editor")
-    public String coverEditor(){
-        return "cover_editor";
-    }
-
-    @RequestMapping(value = "/member_info")
-    public String memberInfo(){
-        return "member_info";
-    }
-
-
-
-    @RequestMapping(value = "/association_introduction_updateRecord", method = POST)
+    @RequestMapping(value = "/updateAssociation", method = POST)
     public @ResponseBody String updateIntroductionRecord(@RequestBody String data){
 
         JSONObject requestData = new JSONObject(data);
 
-        Association association = associationService.getAssociation(1);
+        Association association = associationService.getAssociation(requestData.getInt("associationID"));
         association.setContent(requestData.getString("content"));
         association.setUpdateTime(new Date());
         associationService.saveAssociation(association);
@@ -78,20 +83,28 @@ public class AssociationController {
         return jsonObject.toString();
     }
 
-    @RequestMapping(value = "/association_constitution_updateRecord", method = POST)
-    public @ResponseBody String updateConstitutionRecord(@RequestBody String data){
+    @RequestMapping(value = "/getAssociationByID")
+    public ModelAndView getAssociationByID(@RequestParam("associationID") int associationID){
 
-        JSONObject requestData = new JSONObject(data);
-
-        Association association = associationService.getAssociation(2);
-        association.setContent(requestData.getString("content"));
-        association.setUpdateTime(new Date());
-        associationService.saveAssociation(association);
-
-        JSONObject jsonObject = new JSONObject();
-
-        jsonObject.put("key", "OK");
-
-        return jsonObject.toString();
+        Association association = associationService.getAssociation(associationID);
+        String typeName = "";
+        Map map = new HashMap();
+        map.put("association",association);
+        if (association.getType().equals("1")){
+            typeName = "协会简介";
+        }
+        if (association.getType().equals("2")){
+            typeName = "协会章程";
+        }
+        if (association.getType().equals("3")){
+            typeName = "协会概况";
+        }
+        if (association.getType().equals("4")){
+            typeName = "协会";
+        }
+        map.put("typeName",typeName);
+        return new ModelAndView("updateAssociation","map",map);
     }
+
+
 }

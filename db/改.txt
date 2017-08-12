@@ -10,6 +10,9 @@
 10. 活动通知改成最新动态
 
 后台
-11. 指定地点+先生
-12. 代客祭扫
+11. 指定地点+先生 - 完成
+12. 代客祭扫 - 完成
 13：宣传展示
+
+
+<embed src="http://player.youku.com/player.php/sid/XMjk2MjgyMzg4OA==/v.swf" quality="high" width="480" height="400" align="left" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>

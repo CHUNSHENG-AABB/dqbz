@@ -278,11 +278,14 @@
 					<a class="" href="#" ><i class="fa fa-dashboard"></i> 协会管理<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li>
-							<a href="#" onclick="loadPage('association_introduction')">简介管理</a>
+							<a href="#" onclick="loadPage('../associationList?type=1')">协会简介</a>
 						</li>
 						<li>
-							<a href="#" onclick="loadPage('association_constitution')">章程管理</a>
+							<a href="#" onclick="loadPage('../associationList?type=2')">协会章程</a>
 						</li>
+                        <li>
+                            <a href="#" onclick="loadPage('../associationList?type=3')">协会概况</a>
+                        </li>
 					</ul>
 				</li>
                 <li>
@@ -298,13 +301,16 @@
                             <a href="#" onclick="loadPage('ServiceList')">服务管理</a>
                         </li>
                         <li>
-                            <a href="#" onclick="loadPage('')">宣传展示管理</a>
+                            <a href="#" onclick="loadPage('../resourceList?type=2')">宣传展示视频管理</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="loadPage('../resourceList?type=1')">宣传展示图片管理</a>
                         </li>
                         <li>
                             <a href="#" onclick="loadPage('messageList')">通知公告管理</a>
                         </li>
                         <li>
-                            <a href="#" onclick="loadPage('')">代客祭扫管理</a>
+                            <a href="#" onclick="loadPage('sweepList')">代客祭扫管理</a>
                         </li>
                     </ul>
                 </li>
@@ -368,10 +374,10 @@
 							<a href="#" onclick="loadPage('../ArticleList?type=8')">选择性消费</a>
 						</li>
 						<li>
-							<a href="#" onclick="loadPage('#')">推荐殡葬用品销售点</a>
+							<a href="#" onclick="loadPage('../sirList?type=1')">推荐殡葬用品销售点</a>
 						</li>
 						<li>
-							<a href="#" onclick="loadPage('#')">推荐先生</a>
+							<a href="#" onclick="loadPage('../sirList?type=2')">推荐先生</a>
 						</li>
 					</ul>
 				</li>

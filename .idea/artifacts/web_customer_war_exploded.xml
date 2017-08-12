@@ -31,6 +31,8 @@
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.7" />
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
           <element id="library" level="project" name="Maven: org.json:json:20160810" />
+          <element id="library" level="module" name="Maven: com.alibaba:jconsole:1.8.0" module-name="web-customer" />
+          <element id="library" level="module" name="Maven: com.alibaba:tools:1.8.0" module-name="web-customer" />
         </element>
       </element>
       <element id="directory" name="META-INF">

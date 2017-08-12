@@ -290,4 +290,14 @@ public class Sweep {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser == null ? null : updateUser.trim();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
 }
